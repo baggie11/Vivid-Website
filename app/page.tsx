@@ -1,5 +1,6 @@
 import Hero from "./components/Hero";
 import About from "./components/About";
+import RoadMap from "./components/Timeline";
 
 export default function Home() {
   return (
@@ -7,6 +8,7 @@ export default function Home() {
    
       <Hero />
       <About/>
+      <RoadMap/>
 
     </main>
   );
