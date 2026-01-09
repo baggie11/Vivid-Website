@@ -1,153 +1,187 @@
+'use client';
+
+import { CheckCircle, Users, Trophy, Clock } from 'lucide-react';
+
 const EventDetails = () => {
-    return (
-      <section id="event-details" className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            Event Details
+  return (
+    <section id="details" className="py-20 md:py-28 bg-white">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-16 md:mb-20">
+          <div className="inline-flex items-center gap-3 mb-6">
+            <div className="h-0.5 w-12 bg-gradient-to-r from-[#0D4BA0] to-transparent"></div>
+            <span className="text-[#0D4BA0] font-bold tracking-widest uppercase text-xs md:text-sm">Competition Details</span>
+            <div className="h-0.5 w-12 bg-gradient-to-l from-[#0D4BA0] to-transparent"></div>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Event <span className="bg-gradient-to-r from-[#0D4BA0] to-[#1E6FE8] bg-clip-text text-transparent">Details</span>
           </h2>
-  
-          <div className="space-y-8">
-            {/* Eligibility Criteria */}
-            <div className="border border-gray-300 rounded-lg p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-4 border-b pb-2">Eligibility Criteria</h3>
-              <div className="space-y-4">
-                <p className="text-gray-800">
-                  Participant must be only from <span className="font-bold text-[#0D4BA0]">IT/CSE/ECE/BME/MECH/EEE (UG/PG)</span> field.
-                </p>
-                <p className="text-gray-800">
-                  Maximum of 3 members per team (for External College Participants).
-                </p>
-                <div className="flex items-start gap-2">
-                  <span className="px-2 py-1 bg-red-100 text-red-700 text-xs font-bold rounded">NEW</span>
-                  <p className="text-gray-800">Maximum of 3 members per team (for SSN Students Only)</p>
-                </div>
+          <p className="text-lg text-gray-600">
+            Essential information for VIVID 9.0 participation
+          </p>
+        </div>
+
+        <div className="space-y-6 md:space-y-8">
+          {/* Eligibility Section */}
+          <div className="bg-gradient-to-br from-blue-50 to-blue-50/50 rounded-2xl border border-blue-200 p-8 md:p-10 hover:shadow-lg transition-shadow">
+            <div className="flex items-start gap-4 md:gap-6">
+              <div className="w-12 h-12 rounded-full bg-blue-500 text-white flex items-center justify-center flex-shrink-0 mt-1">
+                <Users className="w-6 h-6" />
+              </div>
+              <div className="flex-1">
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                  Eligibility Criteria
+                </h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-700">
+                      Participants must be from <span className="font-bold text-[#0D4BA0]">IT, CSE, ECE, BME, MECH, or EEE</span> streams (UG/PG)
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-700">
+                      Maximum <span className="font-bold">3 members per team</span>
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-700">
+                      <span className="font-bold">Both individual students</span> and <span className="font-bold">college teams</span> are welcome
+                    </span>
+                  </li>
+                </ul>
               </div>
             </div>
-  
-            {/* Registration Fee */}
-            <div className="border border-gray-300 rounded-lg p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-4 border-b pb-2">Registration Fee</h3>
-              <div className="space-y-6">
-                <div>
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="w-6 h-6 rounded-full bg-[#0D4BA0] text-white flex items-center justify-center font-bold">1</div>
-                    <span className="font-bold text-gray-900">External College Participants</span>
-                  </div>
-                  <p className="text-gray-800 ml-9">
-                    ₹ 1000 + Taxes (for entire team) - Paid only by shortlisted teams for Phase 2. Teams will be intimated via email.
-                  </p>
-                </div>
-                
-                <div>
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="w-6 h-6 rounded-full bg-[#0D4BA0] text-white flex items-center justify-center font-bold">2</div>
-                    <span className="font-bold text-gray-900">SSN Participants</span>
-                  </div>
-                  <p className="text-gray-800 ml-9">
-                    ₹ 200 + Taxes (for entire team) - Paid only by shortlisted teams for Phase 2. Teams will be intimated via email.
-                  </p>
-                </div>
+          </div>
+
+          {/* Registration Fee Section */}
+          <div className="bg-gradient-to-br from-green-50 to-green-50/50 rounded-2xl border border-green-200 p-8 md:p-10 hover:shadow-lg transition-shadow">
+            <div className="flex items-start gap-4 md:gap-6">
+              <div className="w-12 h-12 rounded-full bg-green-500 text-white flex items-center justify-center flex-shrink-0 mt-1">
+                <Trophy className="w-6 h-6" />
               </div>
-            </div>
-  
-            {/* Rewards */}
-            <div className="border border-gray-300 rounded-lg p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-4 border-b pb-2">Rewards</h3>
-              <p className="text-gray-800 mb-6">
-                Prize is subject to availability. Organizer reserves the right to substitute with equivalent value. Subject to VIVID 9.0 terms & conditions.
-              </p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {/* In-House */}
-                <div className="border border-gray-300 rounded p-4">
-                  <div className="flex items-center justify-between mb-3">
-                    <h4 className="font-bold text-gray-900">In-House (SSN Students)</h4>
-                    <span className="px-2 py-1 bg-red-100 text-red-700 text-xs font-bold rounded">NEW</span>
-                  </div>
-                  <p className="text-sm text-gray-600 mb-4">Theme: Project / Demo</p>
-                  <div className="space-y-2">
-                    <div className="flex justify-between">
-                      <span>Winner</span>
-                      <span className="font-bold text-[#0D4BA0]">TBD</span>
+              <div className="flex-1">
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
+                  Registration Fee
+                </h3>
+                <div className="space-y-6">
+                  <div className="bg-white rounded-lg p-6 border border-gray-200">
+                    <div className="flex items-center gap-3 mb-2">
+                      <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-[#0D4BA0] text-white text-sm font-bold">1</span>
+                      <h4 className="font-bold text-lg text-gray-900">External College Participants</h4>
                     </div>
-                    <div className="flex justify-between">
-                      <span>1st Runner Up</span>
-                      <span className="font-bold text-[#0D4BA0]">TBD</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>2nd Runner Up</span>
-                      <span className="font-bold text-[#0D4BA0]">TBD</span>
-                    </div>
+                    <p className="text-gray-600 ml-10">
+                      <span className="font-bold text-[#0D4BA0]">₹1,000 + GST</span> (for entire team, only if shortlisted for Phase 2)
+                    </p>
                   </div>
-                </div>
-  
-                {/* External */}
-                <div className="border border-gray-300 rounded p-4">
-                  <h4 className="font-bold text-gray-900 mb-3">External College Participants</h4>
-                  <p className="text-sm text-gray-600 mb-4">Theme: Project / Demo</p>
-                  <div className="space-y-2">
-                    <div className="flex justify-between">
-                      <span>Winner</span>
-                      <span className="font-bold text-[#0D4BA0]">TBD</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>1st Runner Up</span>
-                      <span className="font-bold text-[#0D4BA0]">TBD</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>2nd Runner Up</span>
-                      <span className="font-bold text-[#0D4BA0]">TBD</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-  
-            {/* Important Dates */}
-            <div className="border border-gray-300 rounded-lg p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-4 border-b pb-2">Important Dates</h3>
-              <div className="space-y-4">
-                <div>
-                  <div className="flex items-center gap-2 mb-1">
-                    <div className="w-2 h-2 bg-[#0D4BA0] rounded-full"></div>
-                    <span className="font-bold">In-house VIVID 9.0:</span>
-                    <span className="text-gray-800">26 March 2025</span>
-                  </div>
-                </div>
-                
-                <div>
-                  <div className="flex items-center gap-2 mb-1">
-                    <div className="w-2 h-2 bg-[#0D4BA0] rounded-full"></div>
-                    <span className="font-bold">External Colleges VIVID 9.0:</span>
-                    <span className="text-gray-800">27 March 2025</span>
-                  </div>
-                </div>
-  
-                <div className="mt-6 pt-4 border-t">
-                  <div className="flex items-center gap-2 mb-2">
-                    <div className="w-2 h-2 bg-[#0D4BA0] rounded-full"></div>
-                    <span className="font-bold">Project/Idea submission deadline:</span>
-                  </div>
-                  <p className="text-gray-600 text-sm mb-3">(Applicable for both In-House & External Colleges)</p>
                   
-                  <div className="flex flex-wrap gap-4">
-                    <div className="text-center">
-                      <div className="text-sm text-gray-600 mb-1">Before</div>
-                      <div className="px-4 py-2 border-2 border-red-400 text-red-600 font-bold rounded">21-March-2025</div>
+                  <div className="bg-white rounded-lg p-6 border border-gray-200">
+                    <div className="flex items-center gap-3 mb-2">
+                      <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-[#0D4BA0] text-white text-sm font-bold">2</span>
+                      <h4 className="font-bold text-lg text-gray-900">SSN College Participants</h4>
                     </div>
-                    
-                    <div className="text-center">
-                      <div className="text-sm text-white/90 mb-1">Final Deadline</div>
-                      <div className="px-4 py-2 bg-[#0D4BA0] text-white font-bold rounded">22-March-2025</div>
+                    <p className="text-gray-600 ml-10">
+                      <span className="font-bold text-[#0D4BA0]">₹200 + GST</span> (for entire team, only if shortlisted for Phase 2)
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Important Dates Section */}
+          <div className="bg-gradient-to-br from-purple-50 to-purple-50/50 rounded-2xl border border-purple-200 p-8 md:p-10 hover:shadow-lg transition-shadow">
+            <div className="flex items-start gap-4 md:gap-6">
+              <div className="w-12 h-12 rounded-full bg-purple-500 text-white flex items-center justify-center flex-shrink-0 mt-1">
+                <Clock className="w-6 h-6" />
+              </div>
+              <div className="flex-1">
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
+                  Important Dates
+                </h3>
+                <div className="space-y-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="bg-white rounded-lg p-4 border border-gray-200">
+                      <p className="text-sm text-gray-600 mb-1">In-House Event</p>
+                      <p className="font-bold text-lg text-gray-900">26 March 2025</p>
+                    </div>
+                    <div className="bg-white rounded-lg p-4 border border-gray-200">
+                      <p className="text-sm text-gray-600 mb-1">External Event</p>
+                      <p className="font-bold text-lg text-gray-900">27 March 2025</p>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-white rounded-lg p-6 border border-red-200 border-l-4 border-l-red-500">
+                    <p className="text-sm text-gray-600 mb-3 font-semibold">Project Submission Deadline</p>
+                    <div className="flex flex-col sm:flex-row gap-3">
+                      <div className="flex-1">
+                        <p className="text-xs text-gray-500 mb-1">Early Deadline</p>
+                        <p className="font-bold text-[#0D4BA0] text-lg">Before 21 March 2025</p>
+                      </div>
+                      <div className="hidden sm:block w-px bg-gray-300"></div>
+                      <div className="flex-1">
+                        <p className="text-xs text-gray-500 mb-1">Final Deadline</p>
+                        <p className="font-bold text-red-600 text-lg">22 March 2025</p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
+          {/* Awards & Prizes */}
+          <div className="bg-gradient-to-br from-amber-50 to-amber-50/50 rounded-2xl border border-amber-200 p-8 md:p-10 hover:shadow-lg transition-shadow">
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
+              🏆 Rewards & Recognition
+            </h3>
+            <p className="text-gray-600 mb-6">
+              Prize amounts are subject to confirmation. The organizer reserves the right to substitute with equivalent value prizes. All awards are subject to VIVID 9.0 terms & conditions.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="bg-white rounded-lg p-6 border border-gray-200">
+                <p className="text-sm font-semibold text-gray-600 mb-4">In-House (SSN Students)</p>
+                <div className="space-y-3">
+                  <div className="flex justify-between items-center pb-3 border-b border-gray-200">
+                    <span className="text-gray-700">1st Prize</span>
+                    <span className="font-bold text-[#0D4BA0]">TBD</span>
+                  </div>
+                  <div className="flex justify-between items-center pb-3 border-b border-gray-200">
+                    <span className="text-gray-700">2nd Prize</span>
+                    <span className="font-bold text-[#0D4BA0]">TBD</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-700">3rd Prize</span>
+                    <span className="font-bold text-[#0D4BA0]">TBD</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-white rounded-lg p-6 border border-gray-200">
+                <p className="text-sm font-semibold text-gray-600 mb-4">External Participants</p>
+                <div className="space-y-3">
+                  <div className="flex justify-between items-center pb-3 border-b border-gray-200">
+                    <span className="text-gray-700">1st Prize</span>
+                    <span className="font-bold text-[#0D4BA0]">TBD</span>
+                  </div>
+                  <div className="flex justify-between items-center pb-3 border-b border-gray-200">
+                    <span className="text-gray-700">2nd Prize</span>
+                    <span className="font-bold text-[#0D4BA0]">TBD</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-700">3rd Prize</span>
+                    <span className="font-bold text-[#0D4BA0]">TBD</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </section>
-    );
-  };
-  
-  export default EventDetails;
+      </div>
+    </section>
+  );
+};
+
+export default EventDetails;

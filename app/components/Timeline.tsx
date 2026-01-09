@@ -1,69 +1,67 @@
 'use client';
 
 import { useState } from 'react';
-import { ChevronDown, ChevronUp, Calendar } from 'lucide-react';
+import { ChevronDown, ChevronUp, CheckCircle2 } from 'lucide-react';
 
 const RoadMap = () => {
-  const [expandedPhase, setExpandedPhase] = useState<number | null>(4); // Phase 2: Registration is expanded by default
+  const [expandedPhase, setExpandedPhase] = useState<number | null>(4);
 
   const phases = [
     {
       id: 1,
-      title: "Phase 1: Submission",
-      subtitle: "Problem Statement",
+      title: "Project Submission",
       date: "Jan 15 - Feb 28, 2025",
-      description: "Participants submit their problem statements and initial project proposals through online forms."
+      description: "Submit your problem statement and initial project proposals through the online portal.",
+      status: "Completed"
     },
     {
       id: 2,
       title: "Phase 1: Screening",
       date: "Mar 1 - Mar 15, 2025",
-      description: "Initial screening of submitted proposals by expert panel for technical feasibility and innovation."
+      description: "Expert panel reviews all submissions for technical feasibility, innovation, and potential impact.",
+      status: "Completed"
     },
     {
       id: 3,
-      title: "Declaration of Shortlisted Candidates",
-      subtitle: "For Phase 2",
+      title: "Shortlisting Announcement",
       date: "Mar 24, 2025",
-      description: "Announcement of shortlisted candidates for Phase 2. Three lists published on March 24, 2025."
+      description: "Three separate lists published for in-house, external, and special category shortlisted candidates.",
+      status: "Upcoming"
     },
     {
       id: 4,
       title: "Phase 2: Registration",
       date: "Mar 25 - Mar 31, 2025",
-      description: "Shortlisted teams complete formal registration, payment, and document submission."
+      description: "Shortlisted teams complete formal registration, payment processing, and final document submission.",
+      status: "Current"
     },
     {
       id: 5,
-      title: "Presentation",
+      title: "Project Presentations",
       date: "Mar 26-27, 2025",
-      description: "Live project presentations and demonstrations before judges at SSN College of Engineering."
+      description: "Live presentations and demonstrations before judges at SSN College of Engineering campus.",
+      status: "Upcoming"
     },
     {
       id: 6,
-      title: "VIVID 9.0",
-      subtitle: "Main Event",
+      title: "Main Event - VIVID 9.0",
       date: "March 27, 2025",
-      description: "Final round of the competition with all shortlisted teams presenting their projects."
+      description: "Grand finale with all shortlisted teams presenting their innovative projects to the evaluation panel.",
+      status: "Upcoming"
     },
     {
       id: 7,
-      title: "Declaration of Shortlisted Candidates",
-      subtitle: "For Phase 3",
+      title: "Phase 3: Power Judging",
       date: "March 27, 2025",
-      description: "Announcement of finalists selected for the power judging round."
+      description: "Intensive final round with detailed evaluation, technical questioning, and finalist selection.",
+      status: "Upcoming"
     },
     {
       id: 8,
-      title: "Phase 3: Power Judging",
-      date: "March 27, 2025",
-      description: "Intensive final judging round with detailed project evaluation and technical questioning."
-    },
-    {
-      id: 9,
       title: "Prize Distribution",
       date: "March 27, 2025",
-      description: "Award ceremony and prize distribution for winners at the main event venue."
+      description: "Award ceremony recognizing outstanding projects and presenting prizes to winners.",
+      status: "Upcoming"
     }
   ];
 
@@ -72,85 +70,90 @@ const RoadMap = () => {
   };
 
   return (
-    <section id="roadmap" className="py-16 bg-white">
-      <div className="max-w-4xl mx-auto px-4">
+    <section id="timeline" className="py-20 md:py-28 bg-white">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Event <span className="text-[#0D4BA0]">Road Map</span>
+        <div className="text-center mb-16 md:mb-20">
+          <div className="inline-flex items-center gap-3 mb-6">
+            <div className="h-0.5 w-12 bg-gradient-to-r from-[#0D4BA0] to-transparent"></div>
+            <span className="text-[#0D4BA0] font-bold tracking-widest uppercase text-xs md:text-sm">Process Flow</span>
+            <div className="h-0.5 w-12 bg-gradient-to-l from-[#0D4BA0] to-transparent"></div>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Event <span className="bg-gradient-to-r from-[#0D4BA0] to-[#1E6FE8] bg-clip-text text-transparent">Timeline</span>
           </h2>
-          <p className="text-gray-600">
-            Timeline for VIVID 9.0 - National Level Project Competition
+          <p className="text-lg text-gray-600">
+            Complete schedule for VIVID 9.0 - 9th National Level Project Competition
           </p>
         </div>
 
-        {/* Timeline Container */}
+        {/* Timeline */}
         <div className="relative">
-          {/* Vertical Line */}
+          {/* Vertical line */}
           <div className="absolute left-6 md:left-1/2 md:transform md:-translate-x-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-200 via-[#0D4BA0] to-blue-200"></div>
 
-          {/* Phases */}
-          <div className="space-y-8">
+          {/* Phase items */}
+          <div className="space-y-6 md:space-y-8">
             {phases.map((phase, index) => {
               const isExpanded = expandedPhase === phase.id;
-              const isCurrent = phase.id === 4; // Phase 2: Registration
+              const isCurrent = phase.status === "Current";
+              const isCompleted = phase.status === "Completed";
 
               return (
                 <div 
                   key={phase.id} 
                   className={`relative flex items-start ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
                 >
-                  {/* Timeline Node */}
+                  {/* Timeline node */}
                   <div className="absolute left-6 md:left-1/2 md:transform md:-translate-x-1/2 z-10">
                     <div className={`
-                      w-4 h-4 rounded-full border-2 border-white shadow-md
-                      ${isCurrent ? 'bg-[#0D4BA0]' : 'bg-[#0D4BA0]'}
+                      w-5 h-5 rounded-full border-4 border-white shadow-md transition-all
+                      ${isCurrent ? 'bg-[#0D4BA0] ring-2 ring-offset-2 ring-blue-400' : 
+                        isCompleted ? 'bg-green-500' : 'bg-gray-300'}
                     `}></div>
                   </div>
 
-                  {/* Phase Card - All cards use same style */}
-                  <div className={`ml-12 md:ml-0 md:w-5/12 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'}`}>
+                  {/* Phase card */}
+                  <div className={`ml-16 md:ml-0 md:w-5/12 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'}`}>
                     <div 
                       onClick={() => togglePhase(phase.id)}
                       className={`
-                        bg-white border rounded-lg shadow-sm cursor-pointer transition-all duration-200
-                        hover:shadow-md ${isExpanded ? 'shadow-md border-[#0D4BA0]' : 'border-gray-200'}
-                        border-l-4 border-l-[#0D4BA0]
+                        bg-white border-2 rounded-xl shadow-sm cursor-pointer transition-colors duration-200
+                        hover:shadow-md ${isExpanded ? 'shadow-lg border-[#0D4BA0]' : 'border-gray-200'}
                       `}
                     >
-                      <div className="p-4">
-                        {/* Header */}
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center gap-3">
-                            <div className="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center">
-                              <div className="w-3 h-3 rounded-full bg-[#0D4BA0]"></div>
+                      {/* Card header */}
+                      <div className="p-5 md:p-6">
+                        <div className="flex items-start justify-between gap-3">
+                          <div className="flex-1">
+                            <div className="flex items-center gap-2 mb-2">
+                              {isCompleted && <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0" />}
+                              <h3 className="font-bold text-lg md:text-xl text-gray-900">
+                                {phase.title}
+                              </h3>
                             </div>
-                            <div>
-                              <h3 className="font-bold text-gray-900">{phase.title}</h3>
-                              {phase.subtitle && (
-                                <p className="text-sm text-gray-600">{phase.subtitle}</p>
-                              )}
-                            </div>
+                            <p className="text-sm md:text-base font-semibold text-[#0D4BA0]">
+                              {phase.date}
+                            </p>
                           </div>
-                          <div className={`${isExpanded ? 'text-[#0D4BA0]' : 'text-gray-400'}`}>
+                          <div className={`transition-transform ${isExpanded ? 'rotate-180' : ''}`}>
                             {isExpanded ? (
-                              <ChevronUp className="w-5 h-5" />
+                              <ChevronUp className="w-5 h-5 text-[#0D4BA0]" />
                             ) : (
-                              <ChevronDown className="w-5 h-5" />
+                              <ChevronDown className="w-5 h-5 text-gray-400" />
                             )}
                           </div>
                         </div>
 
-                        {/* Date */}
-                        <div className="flex items-center gap-2 mt-3">
-                          <Calendar className="w-4 h-4 text-gray-400" />
-                          <span className="text-sm text-gray-600">{phase.date}</span>
-                        </div>
-
-                        {/* Expanded Content */}
+                        {/* Expanded content */}
                         {isExpanded && (
-                          <div className="mt-4 pt-4 border-t border-gray-100">
-                            <p className="text-gray-700">{phase.description}</p>
+                          <div className="mt-5 pt-5 border-t border-gray-200">
+                            <p className="text-gray-700 leading-relaxed">
+                              {phase.description}
+                            </p>
+                            <div className="mt-4 inline-block px-3 py-1 bg-blue-50 text-[#0D4BA0] text-xs font-bold rounded-full">
+                              {phase.status}
+                            </div>
                           </div>
                         )}
                       </div>
@@ -162,7 +165,21 @@ const RoadMap = () => {
           </div>
         </div>
 
-      
+        {/* Bottom CTA */}
+        <div className="mt-12 md:mt-16 p-8 md:p-10 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl border border-blue-200 text-center">
+          <h3 className="text-2xl font-bold text-gray-900 mb-3">
+            Don't miss important deadlines!
+          </h3>
+          <p className="text-gray-600 mb-6">
+            Mark these dates and ensure your team submits before the final deadline
+          </p>
+          <a 
+            href="#"
+            className="inline-flex items-center gap-2 px-6 py-2 bg-[#0D4BA0] text-white font-semibold rounded-lg hover:bg-[#0a3d87] transition-all hover:shadow-lg"
+          >
+            Download Calendar
+          </a>
+        </div>
       </div>
     </section>
   );

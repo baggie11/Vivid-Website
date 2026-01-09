@@ -1,23 +1,19 @@
 import Hero from "./components/Hero";
 import About from "./components/About";
+import Tracks from "./components/Tracks";
 import EventDetails from "./components/Details";
 import RoadMap from "./components/Timeline";
-import EventTimeline from "./components/Table";
 import AcademicContactPage from "./components/Contact";
-import Tracks from "./components/Tracks";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white dark:bg-gray-950">
-   
+    <main className="min-h-screen bg-white dark:bg-slate-950">
       <Hero />
-      <About/>
-      <Tracks/>
-      <EventDetails/>
-      <RoadMap/>
-      <EventTimeline/>
-      <AcademicContactPage/>
-
+      <About />
+      <Tracks />
+      <EventDetails />
+      <RoadMap />
+      <AcademicContactPage />
     </main>
   );
 }

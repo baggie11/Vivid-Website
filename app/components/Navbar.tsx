@@ -1,24 +1,21 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Menu, X, Home, Info, MapPin, Calendar, Route, Users, FileText, Images, Mail } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [activeLink, setActiveLink] = useState('Home');
+  const [activeLink, setActiveLink] = useState('home');
 
   const navItems = [
-    { name: 'Home', icon: <Home className="w-4 h-4" />, href: '#' },
-    { name: 'About', icon: <Info className="w-4 h-4" />, href: '#' },
-    { name: 'Tracks', icon: <Route className="w-4 h-4" />, href: '#' },
-    { name: 'Event Details', icon: <Calendar className="w-4 h-4" />, href: '#' },
-    { name: 'Road Map', icon: <MapPin className="w-4 h-4" />, href: '#' },
-    { name: 'Sponsors', icon: <Users className="w-4 h-4" />, href: '#' },
-    { name: 'Brochure', icon: <FileText className="w-4 h-4" />, href: '#' },
-    { name: 'Gallery', icon: <Images className="w-4 h-4" />, href: '#' },
-    { name: 'Contact Us', icon: <Mail className="w-4 h-4" />, href: '#' },
+    { name: 'Home', id: 'home', href: '#hero' },
+    { name: 'About', id: 'about', href: '#about' },
+    { name: 'Tracks', id: 'tracks', href: '#tracks' },
+    { name: 'Details', id: 'details', href: '#details' },
+    { name: 'Timeline', id: 'timeline', href: '#timeline' },
+    { name: 'Contact', id: 'contact', href: '#contact' },
   ];
 
   useEffect(() => {
@@ -29,94 +26,107 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  return (
-    <nav className={`sticky top-0 z-50 transition-all duration-300 ${
-      scrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-white'
-    }`}>
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3">
-            <div className="w-10 h-10 rounded-xl flex items-center justify-center shadow-md" 
-                 style={{ backgroundColor: '#0D4BA0' }}>
+  // Removed dark mode toggle for a consistently white navbar
 
-            </div>
-            <div>
-              <h1 className="text-xl font-bold bg-gradient-to-r from-[#0D4BA0] to-[#1E6FE8] bg-clip-text text-transparent">
-                Vivid 2026
-              </h1>
-              <p className="text-xs text-gray-500"></p>
-            </div>
+  const handleNavClick = (id: string) => {
+    setActiveLink(id);
+    setIsOpen(false);
+  };
+
+  return (
+    <nav 
+      className={`sticky top-0 z-50 transition-all duration-300 ${
+        scrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-white'
+      }`}
+      role="navigation"
+      aria-label="Main navigation"
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16 md:h-20">
+          {/* Logo */}
+          <Link 
+            href="/" 
+            className="flex items-center group focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0D4BA0] rounded"
+            aria-label="SSN College Home"
+          >
+            <img 
+              src="/images/logo.png" 
+              alt="SSN College Logo" 
+              className="h-12 md:h-14 w-auto object-contain group-hover:scale-105 transition-transform"
+            />
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-1">
             {navItems.map((item) => (
               <Link
-                key={item.name}
+                key={item.id}
                 href={item.href}
-                onClick={() => setActiveLink(item.name)}
-                className={`flex items-center space-x-1 px-4 py-2 rounded-lg transition-all duration-300 ${
-                  activeLink === item.name
-                    ? 'text-[#0D4BA0] font-semibold'
+                onClick={() => handleNavClick(item.id)}
+                className={`px-4 py-2 rounded-lg transition-all duration-300 font-medium relative ${
+                  activeLink === item.id
+                    ? 'text-[#0D4BA0]'
                     : 'text-gray-700 hover:text-[#0D4BA0]'
                 }`}
               >
-                <span className="hidden md:inline">{item.icon}</span>
-                <span>{item.name}</span>
-                {activeLink === item.name && (
-                  <div className="absolute bottom-0 left-0 w-full h-0.5 bg-[#0D4BA0] rounded-full"></div>
+                {item.name}
+                {activeLink === item.id && (
+                  <div className="absolute bottom-1 left-4 right-4 h-0.5 bg-[#0D4BA0] rounded-full"></div>
                 )}
               </Link>
             ))}
-            
+
             {/* CTA Button */}
             <button
-              className="ml-4 px-6 py-2 rounded-lg text-white font-medium transition-all duration-300 hover:shadow-lg hover:scale-105 transform"
-              style={{ backgroundColor: '#0D4BA0' }}
-              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#0a3d87'}
-              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#0D4BA0'}
+              className="ml-4 px-6 py-2 rounded-lg text-white font-semibold bg-[#0D4BA0] hover:bg-[#0a3d87] hover:shadow-md transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              aria-label="Register for VIVID 9.0"
             >
-              Register Now
+              Register
             </button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors"
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          {/* Mobile Menu and Theme Toggle */}
+          <div className="flex lg:hidden items-center gap-2">
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="p-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0D4BA0]"
+              aria-label={isOpen ? 'Close menu' : 'Open menu'}
+              aria-expanded={isOpen}
+              aria-controls="mobile-menu"
+            >
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
-        <div className={`lg:hidden overflow-hidden transition-all duration-300 ${
-          isOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
-        }`}>
-          <div className="py-4 space-y-1 border-t">
+        <div 
+          id="mobile-menu"
+          className={`lg:hidden overflow-hidden transition-all duration-300 ${
+            isOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'
+          }`}
+        >
+          <div className="py-4 space-y-2 border-t border-gray-200">
             {navItems.map((item) => (
               <Link
-                key={item.name}
+                key={item.id}
                 href={item.href}
-                onClick={() => {
-                  setActiveLink(item.name);
-                  setIsOpen(false);
-                }}
-                className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-colors ${
-                  activeLink === item.name
-                    ? 'bg-blue-50 text-[#0D4BA0] font-semibold'
-                    : 'text-gray-700 hover:bg-blue-50'
+                onClick={() => handleNavClick(item.id)}
+                className={`block px-4 py-3 rounded-lg transition-colors font-medium ${
+                  activeLink === item.id
+                    ? 'bg-blue-50 text-[#0D4BA0]'
+                    : 'text-gray-700 hover:bg-gray-50'
                 }`}
               >
-                {item.icon}
-                <span>{item.name}</span>
+                {item.name}
               </Link>
             ))}
             
             <button
-              className="w-full mt-4 px-4 py-3 rounded-lg text-white font-medium transition-all"
-              style={{ backgroundColor: '#0D4BA0' }}
+              className="w-full mt-4 px-4 py-3 rounded-lg text-white font-semibold bg-[#0D4BA0] hover:bg-[#0a3d87] transition-colors"
+              aria-label="Register for VIVID 9.0"
             >
               Register Now
             </button>
