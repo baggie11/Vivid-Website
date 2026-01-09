@@ -3,6 +3,7 @@ import About from "./components/About";
 import Tracks from "./components/Tracks";
 import EventDetails from "./components/Details";
 import RoadMap from "./components/Timeline";
+import Gallery from "./components/Gallery";
 import AcademicContactPage from "./components/Contact";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <Tracks />
       <EventDetails />
       <RoadMap />
+      <Gallery />
       <AcademicContactPage />
     </main>
   );
