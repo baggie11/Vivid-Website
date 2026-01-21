@@ -56,7 +56,7 @@ const AcademicContactPage = () => {
             <span className="bg-gradient-to-r from-[#0D4BA0] to-[#1E6FE8] bg-clip-text text-transparent">Contact</span> Us
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Reach out to the VIVID 9.0 organizing committee for any queries or assistance
+            Reach out to the VIVID 10.0 organizing committee for any queries or assistance
           </p>
         </div>
 
@@ -146,12 +146,12 @@ const AcademicContactPage = () => {
               {/* Convenor Section */}
               {convenor && (
                 <div className="bg-white rounded-xl overflow-hidden shadow-lg border border-blue-100 mb-8 transform hover:scale-[1.02] transition-all duration-300">
-                  <div className="relative h-64 md:h-72 w-full bg-gray-100">
+                  <div className="relative w-full aspect-[4/3] bg-gray-100">
                     <Image
                       src={convenor.image}
                       alt={convenor.name}
                       fill
-                      className="object-cover object-top"
+                      className="object-contain"
                     />
                     <div className="absolute top-4 right-4 bg-[#0D4BA0] text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-md">
                       Convenor

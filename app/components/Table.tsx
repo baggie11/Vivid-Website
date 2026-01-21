@@ -4,7 +4,7 @@ const EventTimeline = () => {
       { event: "Phase 1: Screening", startDate: "15-March-2026", endDate: "21-March-2026", note: "" },
       { event: "Declaration of shortlisted candidates for Phase 2", startDate: "21-March-2026", endDate: "25-March-2026", note: "" },
       { event: "Phase 2: Registration", startDate: "21-March-2026", endDate: "25-March-2026", note: "" },
-      { event: "VIVID 9.0 - In-House", startDate: "26-March-2026", endDate: "26-March-2026", note: "" },
+      { event: "VIVID 10.0 - In-House", startDate: "26-March-2026", endDate: "26-March-2026", note: "" },
       { event: "Project Presentation In-House", startDate: "26-March-2026", endDate: "26-March-2026", note: "" },
       { event: "Declaration of Shortlisted Candidates for Phase 3 In-House", startDate: "26-March-2026", endDate: "26-March-2026", note: "" },
       { event: "Phase 3: Power Judging In-House", startDate: "26-March-2026", endDate: "26-March-2026", note: "" },
@@ -16,7 +16,7 @@ const EventTimeline = () => {
       { event: "Phase 1: Screening", startDate: "15-March-2026", endDate: "22-March-2026", note: "" },
       { event: "Declaration of shortlisted candidates for Phase 2", startDate: "21-March-2026", endDate: "24-March-2026", note: "" },
       { event: "Phase 2: Registration", startDate: "21-March-2026", endDate: "25-March-2026", note: "" },
-      { event: "VIVID 9.0 - External Participants", startDate: "27-March-2026", endDate: "27-March-2026", note: "" },
+      { event: "VIVID 10.0 - External Participants", startDate: "27-March-2026", endDate: "27-March-2026", note: "" },
       { event: "Project Presentation External Participants", startDate: "27-March-2026", endDate: "27-March-2026", note: "" },
       { event: "Declaration of Shortlisted Candidates for Phase 3 External Participants", startDate: "27-March-2026", endDate: "27-March-2026", note: "" },
       { event: "Phase 3: Power Judging External Participants", startDate: "27-March-2026", endDate: "27-March-2026", note: "" },
@@ -31,7 +31,7 @@ const EventTimeline = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Event <span className="text-[#0D4BA0]">Timeline</span>
             </h2>
-            <p className="text-gray-600">Complete schedule for all VIVID 9.0 participants</p>
+            <p className="text-gray-600">Complete schedule for all VIVID 10.0 participants</p>
           </div>
   
           {/* Side-by-Side Tables */}

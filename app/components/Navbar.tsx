@@ -63,12 +63,12 @@ const Navbar = () => {
             <div className="h-8 w-[1px] bg-gray-300 hidden sm:block"></div>
 
             {/* VIVID Logo */}
-            <div className="relative h-12 w-auto md:h-14 aspect-[3/1]">
+            <div className="relative h-14 w-auto md:h-16 aspect-[3.5/1]">
               <Image
                 src="/images/logo.png"
-                alt="VIVID 9.0 Logo"
-                height={56}
-                width={150}
+                alt="VIVID 10.0 Logo"
+                height={64}
+                width={224}
                 className="h-full w-auto object-contain group-hover:scale-105 transition-transform"
                 priority
               />

@@ -10,19 +10,19 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "VIVID 9.0 - National Level Project Competition | SSN College",
-  description: "VIVID 9.0: Premier national-level project competition organized by Department of IT, SSN College of Engineering. Showcase innovation in IoT, AI/ML, Blockchain, Data Analytics, and Cybersecurity.",
+  title: "VIVID 10.0 - National Level Project Competition | SSN College",
+  description: "VIVID 10.0: Premier national-level project competition organized by Department of IT, SSN College of Engineering. Showcase innovation in IoT, AI/ML, Blockchain, Data Analytics, and Cybersecurity.",
   keywords: "VIVID, project competition, national level, SSN College, IT competition, innovation",
   openGraph: {
-    title: "VIVID 9.0 - National Level Project Competition",
-    description: "Premier project competition by SSN College of Engineering. March 26-27, 2025.",
+    title: "VIVID 10.0 - National Level Project Competition",
+    description: "Premier project competition by SSN College of Engineering. March 26-27, 2026.",
     url: "https://vivid.ssn.edu.in",
-    siteName: "VIVID 9.0",
+    siteName: "VIVID 10.0",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "VIVID 9.0 - National Level Project Competition",
+    title: "VIVID 10.0 - National Level Project Competition",
     description: "National-level project competition by SSN College of Engineering",
   },
 };

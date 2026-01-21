@@ -14,7 +14,7 @@ const About = () => {
     {
       title: "VIVID 10.0",
       icon: <Target className="w-8 h-8" />,
-      content: "VIVID 9.0 is a prestigious National Level Project Competition for IT, CSE, ECE, BME, MECH, and EEE (UG/PG) students. It encourages participants to leverage their knowledge, skills, and creativity to develop innovative technology solutions that create meaningful impact.",
+      content: "VIVID 10.0 is a prestigious National Level Project Competition for IT, CSE, ECE, BME, MECH, and EEE (UG/PG) students. It encourages participants to leverage their knowledge, skills, and creativity to develop innovative technology solutions that create meaningful impact.",
       highlight: "9th National Level Project Competition",
       accentColor: "from-emerald-500 to-emerald-600"
     },

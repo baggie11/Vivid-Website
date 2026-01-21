@@ -7,25 +7,22 @@ const Gallery = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
-  // All available images from day1 and day2 folders
-  const allImages = useMemo(() => {
-    const day1Images = Array.from({ length: 20 }, (_, i) => ({
-      src: `/images/day1/day1_${i + 1}.jpg`,
-      alt: `VIVID Day 1 - Image ${i + 1}`
-    }));
-    
-    const day2Images = Array.from({ length: 20 }, (_, i) => ({
-      src: `/images/day2/day2_${i + 1}.jpg`,
-      alt: `VIVID Day 2 - Image ${i + 1}`
-    }));
-    
-    return [...day1Images, ...day2Images];
-  }, []);
+  // All available images from carousel_images folder
+  const allImages = useMemo(() => [
+    { src: '/images/carousel_images/DSC04603.JPG', alt: 'VIVID - Event Image 1' },
+    { src: '/images/carousel_images/DSC04617.JPG', alt: 'VIVID - Event Image 2' },
+    { src: '/images/carousel_images/DSC04630.JPG', alt: 'VIVID - Event Image 3' },
+    { src: '/images/carousel_images/IMG_8408.JPG', alt: 'VIVID - Event Image 4' },
+    { src: '/images/carousel_images/IMG_8417.JPG', alt: 'VIVID - Event Image 5' },
+    { src: '/images/carousel_images/IMG_8427.JPG', alt: 'VIVID - Event Image 6' },
+    { src: '/images/carousel_images/IMG_8441.JPG', alt: 'VIVID - Event Image 7' },
+    { src: '/images/carousel_images/IMG_8455.JPG', alt: 'VIVID - Event Image 8' },
+  ], []);
 
   // Select random images on component mount
   const images = useMemo(() => {
     const shuffled = [...allImages].sort(() => Math.random() - 0.5);
-    return shuffled.slice(0, 12); // Show 12 random images
+    return shuffled.slice(0, 8); // Show all 8 images
   }, [allImages]);
 
   const nextSlide = () => {
