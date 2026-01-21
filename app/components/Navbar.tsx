@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,26 +35,44 @@ const Navbar = () => {
   };
 
   return (
-    <nav 
-      className={`sticky top-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-white'
-      }`}
+    <nav
+      className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-white'
+        }`}
       role="navigation"
       aria-label="Main navigation"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 md:h-20">
           {/* Logo */}
-          <Link 
-            href="/" 
-            className="flex items-center group focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0D4BA0] rounded"
+          <Link
+            href="/"
+            className="flex items-center gap-4 group focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0D4BA0] rounded"
             aria-label="SSN College Home"
           >
-            <img 
-              src="/images/logo.png" 
-              alt="SSN College Logo" 
-              className="h-12 md:h-14 w-auto object-contain group-hover:scale-105 transition-transform"
-            />
+            {/* Vivid Logo Icon */}
+            <div className="relative h-10 w-10 md:h-12 md:w-12 overflow-hidden rounded-full border-2 border-gray-100 shadow-sm flex-shrink-0 bg-white">
+              <Image
+                src="/images/vivid.jpg"
+                alt="Vivid Logo"
+                fill
+                className="object-cover hover:scale-110 transition-transform duration-300"
+              />
+            </div>
+
+            {/* Divider */}
+            <div className="h-8 w-[1px] bg-gray-300 hidden sm:block"></div>
+
+            {/* VIVID Logo */}
+            <div className="relative h-12 w-auto md:h-14 aspect-[3/1]">
+              <Image
+                src="/images/logo.png"
+                alt="VIVID 9.0 Logo"
+                height={56}
+                width={150}
+                className="h-full w-auto object-contain group-hover:scale-105 transition-transform"
+                priority
+              />
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -63,11 +82,10 @@ const Navbar = () => {
                 key={item.id}
                 href={item.href}
                 onClick={() => handleNavClick(item.id)}
-                className={`px-4 py-2 rounded-lg transition-all duration-300 font-medium relative ${
-                  activeLink === item.id
-                    ? 'text-[#0D4BA0]'
-                    : 'text-gray-700 hover:text-[#0D4BA0]'
-                }`}
+                className={`px-4 py-2 rounded-lg transition-all duration-300 font-medium relative ${activeLink === item.id
+                  ? 'text-[#0D4BA0]'
+                  : 'text-gray-700 hover:text-[#0D4BA0]'
+                  }`}
               >
                 {item.name}
                 {activeLink === item.id && (
@@ -102,11 +120,10 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Navigation */}
-        <div 
+        <div
           id="mobile-menu"
-          className={`lg:hidden overflow-hidden transition-all duration-300 ${
-            isOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'
-          }`}
+          className={`lg:hidden overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'
+            }`}
         >
           <div className="py-4 space-y-2 border-t border-gray-200">
             {navItems.map((item) => (
@@ -114,16 +131,15 @@ const Navbar = () => {
                 key={item.id}
                 href={item.href}
                 onClick={() => handleNavClick(item.id)}
-                className={`block px-4 py-3 rounded-lg transition-colors font-medium ${
-                  activeLink === item.id
-                    ? 'bg-blue-50 text-[#0D4BA0]'
-                    : 'text-gray-700 hover:bg-gray-50'
-                }`}
+                className={`block px-4 py-3 rounded-lg transition-colors font-medium ${activeLink === item.id
+                  ? 'bg-blue-50 text-[#0D4BA0]'
+                  : 'text-gray-700 hover:bg-gray-50'
+                  }`}
               >
                 {item.name}
               </Link>
             ))}
-            
+
             <button
               className="w-full mt-4 px-4 py-3 rounded-lg text-white font-semibold bg-[#0D4BA0] hover:bg-[#0a3d87] transition-colors"
               aria-label="Register for VIVID 9.0"

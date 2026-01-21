@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Mail, Phone, MapPin, Globe, LinkedinIcon } from 'lucide-react';
+import Image from 'next/image';
 
 const AcademicContactPage = () => {
   const organizers = [
@@ -38,6 +39,9 @@ const AcademicContactPage = () => {
     }
   ];
 
+  const convenor = organizers.find(p => p.role === 'convenor');
+  const otherOrganizers = organizers.filter(p => p.role !== 'convenor');
+
   return (
     <section id="contact" className="py-20 md:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -57,13 +61,13 @@ const AcademicContactPage = () => {
         </div>
 
         {/* Main Contact Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 mb-20">
           {/* Contact Information */}
-          <div>
+          <div className="order-2 lg:order-1">
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">
               Event Coordinator
             </h3>
-            
+
             <div className="space-y-8">
               {/* Email */}
               <div className="flex gap-4">
@@ -86,10 +90,10 @@ const AcademicContactPage = () => {
                 <div>
                   <h4 className="font-bold text-gray-900 mb-2">Location</h4>
                   <p className="text-gray-600 leading-relaxed">
-                    Department of Information Technology<br/>
-                    SSN College of Engineering<br/>
-                    Rajiv Gandhi Salai (OMR)<br/>
-                    SSN Nagar, Kalavakkam – 603110<br/>
+                    Department of Information Technology<br />
+                    SSN College of Engineering<br />
+                    Rajiv Gandhi Salai (OMR)<br />
+                    SSN Nagar, Kalavakkam – 603110<br />
                     Tamil Nadu, India
                   </p>
                 </div>
@@ -132,46 +136,70 @@ const AcademicContactPage = () => {
             </div>
           </div>
 
-          {/* Committee Information */}
-          <div>
+          {/* Committee Information - Right Column */}
+          <div className="order-1 lg:order-2">
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">
               Organizing Committee
             </h3>
-            
+
             <div className="space-y-6">
-              {organizers.map((person, index) => (
-                <div 
-                  key={index} 
-                  className="bg-gradient-to-br from-gray-50 to-gray-50/50 rounded-xl p-6 border border-gray-200 hover:shadow-lg hover:border-[#0D4BA0]/30 transition-all"
-                >
-                  <div className="flex items-start gap-4">
-                    {/* Avatar placeholder - would use image in production */}
-                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#0D4BA0] to-blue-600 flex items-center justify-center text-white font-bold text-xl flex-shrink-0">
-                      {person.name.charAt(0)}
+              {/* Convenor Section */}
+              {convenor && (
+                <div className="bg-white rounded-xl overflow-hidden shadow-lg border border-blue-100 mb-8 transform hover:scale-[1.02] transition-all duration-300">
+                  <div className="relative h-64 md:h-72 w-full bg-gray-100">
+                    <Image
+                      src={convenor.image}
+                      alt={convenor.name}
+                      fill
+                      className="object-cover object-top"
+                    />
+                    <div className="absolute top-4 right-4 bg-[#0D4BA0] text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-md">
+                      Convenor
                     </div>
-                    
-                    <div className="flex-1">
-                      <h4 className="font-bold text-lg text-gray-900">
+                  </div>
+                  <div className="p-6 text-center">
+                    <h4 className="font-bold text-xl text-gray-900 mb-1">{convenor.name}</h4>
+                    <p className="text-[#0D4BA0] font-semibold mb-2">{convenor.title}</p>
+                    <p className="text-gray-600 text-sm">{convenor.department}</p>
+                  </div>
+                </div>
+              )}
+
+              {/* Other Organizers */}
+              <div className="grid grid-cols-1 gap-4">
+                {otherOrganizers.map((person, index) => (
+                  <div
+                    key={index}
+                    className="bg-white rounded-xl p-4 border border-gray-100 hover:shadow-md hover:border-blue-100 transition-all flex items-center gap-4 group"
+                  >
+                    <div className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-2 border-gray-100 flex-shrink-0 group-hover:border-[#0D4BA0] transition-colors relative">
+                      <Image
+                        src={person.image}
+                        alt={person.name}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+
+                    <div className="flex-1 min-w-0">
+                      <h4 className="font-bold text-gray-900 truncate">
                         {person.name}
                       </h4>
-                      <p className="text-[#0D4BA0] font-semibold text-sm mb-1">
+                      <p className="text-[#0D4BA0] font-medium text-xs md:text-sm mb-0.5 truncate">
                         {person.title}
                       </p>
-                      <p className="text-gray-600 text-sm mb-2">
-                        {person.department}
-                      </p>
                       {person.phone && (
-                        <div className="flex items-center gap-2 text-gray-700">
-                          <Phone className="w-4 h-4 text-[#0D4BA0]" />
-                          <a href={`tel:${person.phone}`} className="hover:text-[#0D4BA0] transition-colors text-sm">
+                        <div className="flex items-center gap-1.5 text-gray-500 text-xs md:text-sm mt-1">
+                          <Phone className="w-3.5 h-3.5" />
+                          <a href={`tel:${person.phone}`} className="hover:text-[#0D4BA0] transition-colors">
                             {person.phone}
                           </a>
                         </div>
                       )}
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -183,14 +211,14 @@ const AcademicContactPage = () => {
               About SSN College of Engineering
             </h3>
             <p className="text-gray-700 leading-relaxed mb-6">
-              SSN Institutions, founded by <span className="font-semibold">Dr. Shiv Nadar</span>, Chairman of HCL Technologies, 
-              stands as a premier center of higher learning. With a steadfast commitment to pursuing excellence in education 
-              and research, SSN College of Engineering offers comprehensive graduate, undergraduate, and research programs 
+              SSN Institutions, founded by <span className="font-semibold">Dr. Shiv Nadar</span>, Chairman of HCL Technologies,
+              stands as a premier center of higher learning. With a steadfast commitment to pursuing excellence in education
+              and research, SSN College of Engineering offers comprehensive graduate, undergraduate, and research programs
               across multiple disciplines.
             </p>
             <p className="text-gray-700 leading-relaxed">
-              The <span className="font-semibold">Department of Information Technology</span>, established in 1999, continues 
-              to provide quality education while imparting IT excellence. The department is dedicated to creating responsible 
+              The <span className="font-semibold">Department of Information Technology</span>, established in 1999, continues
+              to provide quality education while imparting IT excellence. The department is dedicated to creating responsible
               technologists and industry professionals who contribute meaningfully to society and the technology sector.
             </p>
           </div>
