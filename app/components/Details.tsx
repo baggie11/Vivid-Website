@@ -17,7 +17,7 @@ const EventDetails = () => {
             Event <span className="bg-gradient-to-r from-[#0D4BA0] to-[#1E6FE8] bg-clip-text text-transparent">Details</span>
           </h2>
           <p className="text-lg text-gray-600">
-            Essential information for VIVID 9.0 participation
+            Essential information for VIVID 10.0 participation
           </p>
         </div>
 
@@ -138,7 +138,7 @@ const EventDetails = () => {
               🏆 Rewards & Recognition
             </h3>
             <p className="text-gray-600 mb-6">
-              Prize amounts are subject to confirmation. The organizer reserves the right to substitute with equivalent value prizes. All awards are subject to VIVID 9.0 terms & conditions.
+              Prize amounts are subject to confirmation. The organizer reserves the right to substitute with equivalent value prizes. All awards are subject to VIVID 10.0 terms & conditions.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="bg-white rounded-lg p-6 border border-gray-200">

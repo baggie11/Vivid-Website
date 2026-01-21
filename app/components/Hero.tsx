@@ -30,7 +30,7 @@ const Hero = () => {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-50 to-blue-100 border border-blue-200 mb-8 animate-fade-in">
             <Sparkles className="w-4 h-4 text-[#0D4BA0]" aria-hidden="true" />
             <span className="text-sm font-semibold text-[#0D4BA0]">
-              9th Edition • National Level Competition
+              10th Edition • National Level Competition
             </span>
           </div>
 
@@ -39,7 +39,7 @@ const Hero = () => {
             <span className="block text-gray-900">VIVID</span>
             <span className="block mt-4">
               <span className="bg-gradient-to-r from-[#0D4BA0] via-blue-600 to-[#1E6FE8] bg-clip-text text-transparent font-black">
-                9.0
+                10.0
               </span>
             </span>
           </h1>

@@ -12,7 +12,7 @@ const About = () => {
       accentColor: "from-blue-500 to-blue-600"
     },
     {
-      title: "VIVID 9.0",
+      title: "VIVID 10.0",
       icon: <Target className="w-8 h-8" />,
       content: "VIVID 9.0 is a prestigious National Level Project Competition for IT, CSE, ECE, BME, MECH, and EEE (UG/PG) students. It encourages participants to leverage their knowledge, skills, and creativity to develop innovative technology solutions that create meaningful impact.",
       highlight: "9th National Level Project Competition",
@@ -56,7 +56,7 @@ const About = () => {
             <div className="h-0.5 w-12 bg-gradient-to-l from-[#0D4BA0] to-transparent"></div>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            About <span className="bg-gradient-to-r from-[#0D4BA0] to-[#1E6FE8] bg-clip-text text-transparent">VIVID 9.0</span>
+            About <span className="bg-gradient-to-r from-[#0D4BA0] to-[#1E6FE8] bg-clip-text text-transparent">VIVID 10.0</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Discover the premier national-level project competition by SSN College of Engineering

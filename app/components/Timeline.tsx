@@ -44,7 +44,7 @@ const RoadMap = () => {
     },
     {
       id: 6,
-      title: "Main Event - VIVID 9.0",
+      title: "Main Event - VIVID 10.0",
       date: "March 27, 2025",
       description: "Grand finale with all shortlisted teams presenting their innovative projects to the evaluation panel.",
       status: "Upcoming"
@@ -83,7 +83,7 @@ const RoadMap = () => {
             Event <span className="bg-gradient-to-r from-[#0D4BA0] to-[#1E6FE8] bg-clip-text text-transparent">Timeline</span>
           </h2>
           <p className="text-lg text-gray-600">
-            Complete schedule for VIVID 9.0 - 9th National Level Project Competition
+            Complete schedule for VIVID 10.0 - 10th National Level Project Competition
           </p>
         </div>
 
