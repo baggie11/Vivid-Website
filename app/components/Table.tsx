@@ -1,26 +1,26 @@
 const EventTimeline = () => {
     const inHouseEvents = [
-      { event: "Phase 1: Submission (Problem Statement)", startDate: "28-February-2025", endDate: "", note: "<21-March-2025>\n\n<22-March-2025>" },
-      { event: "Phase 1: Screening", startDate: "15-March-2025", endDate: "21-March-2025", note: "" },
-      { event: "Declaration of shortlisted candidates for Phase 2", startDate: "21-March-2025", endDate: "25-March-2025", note: "" },
-      { event: "Phase 2: Registration", startDate: "21-March-2025", endDate: "25-March-2025", note: "" },
-      { event: "VIVID 9.0 - In-House", startDate: "26-March-2025", endDate: "26-March-2025", note: "" },
-      { event: "Project Presentation In-House", startDate: "26-March-2025", endDate: "26-March-2025", note: "" },
-      { event: "Declaration of Shortlisted Candidates for Phase 3 In-House", startDate: "26-March-2025", endDate: "26-March-2025", note: "" },
-      { event: "Phase 3: Power Judging In-House", startDate: "26-March-2025", endDate: "26-March-2025", note: "" },
-      { event: "Prize Distribution In-House", startDate: "26-March-2025", endDate: "26-March-2025", note: "" },
+      { event: "Phase 1: Submission (Problem Statement)", startDate: "28-February-2026", endDate: "", note: "<21-March-2026>\n\n<22-March-2026>" },
+      { event: "Phase 1: Screening", startDate: "15-March-2026", endDate: "21-March-2026", note: "" },
+      { event: "Declaration of shortlisted candidates for Phase 2", startDate: "21-March-2026", endDate: "25-March-2026", note: "" },
+      { event: "Phase 2: Registration", startDate: "21-March-2026", endDate: "25-March-2026", note: "" },
+      { event: "VIVID 9.0 - In-House", startDate: "26-March-2026", endDate: "26-March-2026", note: "" },
+      { event: "Project Presentation In-House", startDate: "26-March-2026", endDate: "26-March-2026", note: "" },
+      { event: "Declaration of Shortlisted Candidates for Phase 3 In-House", startDate: "26-March-2026", endDate: "26-March-2026", note: "" },
+      { event: "Phase 3: Power Judging In-House", startDate: "26-March-2026", endDate: "26-March-2026", note: "" },
+      { event: "Prize Distribution In-House", startDate: "26-March-2026", endDate: "26-March-2026", note: "" },
     ];
   
     const externalEvents = [
-      { event: "Phase 1: Submission (Problem Statement)", startDate: "28-February-2025", endDate: "", note: "<21-March-2025>\n\n22-March-2025" },
-      { event: "Phase 1: Screening", startDate: "15-March-2025", endDate: "22-March-2025", note: "" },
-      { event: "Declaration of shortlisted candidates for Phase 2", startDate: "21-March-2025", endDate: "24-March-2025", note: "" },
-      { event: "Phase 2: Registration", startDate: "21-March-2025", endDate: "25-March-2025", note: "" },
-      { event: "VIVID 9.0 - External Participants", startDate: "27-March-2025", endDate: "27-March-2025", note: "" },
-      { event: "Project Presentation External Participants", startDate: "27-March-2025", endDate: "27-March-2025", note: "" },
-      { event: "Declaration of Shortlisted Candidates for Phase 3 External Participants", startDate: "27-March-2025", endDate: "27-March-2025", note: "" },
-      { event: "Phase 3: Power Judging External Participants", startDate: "27-March-2025", endDate: "27-March-2025", note: "" },
-      { event: "Prize Distribution External Participants", startDate: "27-March-2025", endDate: "27-March-2025", note: "" },
+      { event: "Phase 1: Submission (Problem Statement)", startDate: "28-February-2026", endDate: "", note: "<21-March-2026>\n\n22-March-2026" },
+      { event: "Phase 1: Screening", startDate: "15-March-2026", endDate: "22-March-2026", note: "" },
+      { event: "Declaration of shortlisted candidates for Phase 2", startDate: "21-March-2026", endDate: "24-March-2026", note: "" },
+      { event: "Phase 2: Registration", startDate: "21-March-2026", endDate: "25-March-2026", note: "" },
+      { event: "VIVID 9.0 - External Participants", startDate: "27-March-2026", endDate: "27-March-2026", note: "" },
+      { event: "Project Presentation External Participants", startDate: "27-March-2026", endDate: "27-March-2026", note: "" },
+      { event: "Declaration of Shortlisted Candidates for Phase 3 External Participants", startDate: "27-March-2026", endDate: "27-March-2026", note: "" },
+      { event: "Phase 3: Power Judging External Participants", startDate: "27-March-2026", endDate: "27-March-2026", note: "" },
+      { event: "Prize Distribution External Participants", startDate: "27-March-2026", endDate: "27-March-2026", note: "" },
     ];
   
     return (

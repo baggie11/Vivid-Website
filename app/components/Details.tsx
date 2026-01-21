@@ -105,11 +105,11 @@ const EventDetails = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="bg-white rounded-lg p-4 border border-gray-200">
                       <p className="text-sm text-gray-600 mb-1">In-House Event</p>
-                      <p className="font-bold text-lg text-gray-900">26 March 2025</p>
+                      <p className="font-bold text-lg text-gray-900">26 March 2026</p>
                     </div>
                     <div className="bg-white rounded-lg p-4 border border-gray-200">
                       <p className="text-sm text-gray-600 mb-1">External Event</p>
-                      <p className="font-bold text-lg text-gray-900">27 March 2025</p>
+                      <p className="font-bold text-lg text-gray-900">27 March 2026</p>
                     </div>
                   </div>
                   
@@ -118,12 +118,12 @@ const EventDetails = () => {
                     <div className="flex flex-col sm:flex-row gap-3">
                       <div className="flex-1">
                         <p className="text-xs text-gray-500 mb-1">Early Deadline</p>
-                        <p className="font-bold text-[#0D4BA0] text-lg">Before 21 March 2025</p>
+                        <p className="font-bold text-[#0D4BA0] text-lg">Before 21 March 2026</p>
                       </div>
                       <div className="hidden sm:block w-px bg-gray-300"></div>
                       <div className="flex-1">
                         <p className="text-xs text-gray-500 mb-1">Final Deadline</p>
-                        <p className="font-bold text-red-600 text-lg">22 March 2025</p>
+                        <p className="font-bold text-red-600 text-lg">22 March 2026</p>
                       </div>
                     </div>
                   </div>

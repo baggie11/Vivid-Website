@@ -10,56 +10,56 @@ const RoadMap = () => {
     {
       id: 1,
       title: "Project Submission",
-      date: "Jan 15 - Feb 28, 2025",
+      date: "Jan 15 - Feb 28, 2026",
       description: "Submit your problem statement and initial project proposals through the online portal.",
       status: "Completed"
     },
     {
       id: 2,
       title: "Phase 1: Screening",
-      date: "Mar 1 - Mar 15, 2025",
+      date: "Mar 1 - Mar 15, 2026",
       description: "Expert panel reviews all submissions for technical feasibility, innovation, and potential impact.",
       status: "Completed"
     },
     {
       id: 3,
       title: "Shortlisting Announcement",
-      date: "Mar 24, 2025",
+      date: "Mar 24, 2026",
       description: "Three separate lists published for in-house, external, and special category shortlisted candidates.",
       status: "Upcoming"
     },
     {
       id: 4,
       title: "Phase 2: Registration",
-      date: "Mar 25 - Mar 31, 2025",
+      date: "Mar 25 - Mar 31, 2026",
       description: "Shortlisted teams complete formal registration, payment processing, and final document submission.",
       status: "Current"
     },
     {
       id: 5,
       title: "Project Presentations",
-      date: "Mar 26-27, 2025",
+      date: "Mar 26-27, 2026",
       description: "Live presentations and demonstrations before judges at SSN College of Engineering campus.",
       status: "Upcoming"
     },
     {
       id: 6,
       title: "Main Event - VIVID 10.0",
-      date: "March 27, 2025",
+      date: "March 27, 2026",
       description: "Grand finale with all shortlisted teams presenting their innovative projects to the evaluation panel.",
       status: "Upcoming"
     },
     {
       id: 7,
       title: "Phase 3: Power Judging",
-      date: "March 27, 2025",
+      date: "March 27, 2026",
       description: "Intensive final round with detailed evaluation, technical questioning, and finalist selection.",
       status: "Upcoming"
     },
     {
       id: 8,
       title: "Prize Distribution",
-      date: "March 27, 2025",
+      date: "March 27, 2026",
       description: "Award ceremony recognizing outstanding projects and presenting prizes to winners.",
       status: "Upcoming"
     }

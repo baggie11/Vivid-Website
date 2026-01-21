@@ -57,8 +57,8 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12 text-lg text-gray-600">
             <div className="flex items-center gap-2">
               <Calendar className="w-5 h-5 text-[#0D4BA0]" aria-hidden="true" />
-              <time dateTime="2025-03-26" className="font-semibold text-gray-900">
-                March 26-27, 2025
+              <time dateTime="2026-03-26" className="font-semibold text-gray-900">
+                March 26-27, 2026
               </time>
             </div>
             <div className="hidden sm:block w-1 h-1 bg-gray-300 rounded-full"></div>
