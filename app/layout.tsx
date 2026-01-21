@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Oswald, Bebas_Neue } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 
@@ -7,6 +7,18 @@ const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
+});
+
+const oswald = Oswald({
+  variable: "--font-oswald",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
+const bebasNeue = Bebas_Neue({
+  variable: "--font-bebas",
+  subsets: ["latin"],
+  weight: ["400"],
 });
 
 export const metadata: Metadata = {
@@ -35,7 +47,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${inter.variable} antialiased bg-white text-gray-900`}
+        className={`${inter.variable} ${oswald.variable} ${bebasNeue.variable} antialiased bg-white text-gray-900`}
       >
         <Navbar />
         {children}
