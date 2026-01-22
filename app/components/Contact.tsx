@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Mail, Phone, MapPin, Globe, LinkedinIcon } from 'lucide-react';
+import { Mail, Phone, MapPin, Globe, Linkedin } from 'lucide-react';
 import Image from 'next/image';
 
 const AcademicContactPage = () => {
@@ -11,30 +11,39 @@ const AcademicContactPage = () => {
       title: "Professor & Head of Department",
       department: "Department of Information Technology",
       image: "/images/hod.jpg",
+      email: "shahina@ssn.edu.in",
+      phone: "+91 98765 43210",
+      linkedin: "https://linkedin.com/in/shahina",
       role: "convenor"
     },
     {
       name: "Dr. I. Joe Louis Paul",
       title: "Associate Professor",
       department: "Department of Information Technology",
-      phone: "+91 98415 14128",
       image: "/images/joe.jpg",
+      email: "joelouispaul@ssn.edu.in",
+      phone: "+91 98415 14128",
+      linkedin: "https://linkedin.com/in/joelouispaul",
       role: "organizer"
     },
     {
       name: "Dr. R. Swathika",
       title: "Assistant Professor",
       department: "Department of Information Technology",
-      phone: "+91 99403 56882",
       image: "/images/swathika.jpg",
+      email: "swathikar@ssn.edu.in",
+      phone: "+91 99403 56882",
+      linkedin: "https://linkedin.com/in/swathika",
       role: "organizer"
     },
     {
       name: "Dr. N. Radha",
       title: "Associate Professor",
       department: "Department of Information Technology",
-      phone: "+91 99443 58632",
       image: "/images/radha.jpg",
+      email: "radhan@ssn.edu.in",
+      phone: "+91 99443 58632",
+      linkedin: "https://linkedin.com/in/radhan",
       role: "organizer"
     }
   ];
@@ -62,7 +71,7 @@ const AcademicContactPage = () => {
           {/* Contact Information */}
           <div className="order-2 lg:order-1">
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">
-              Event Coordinator
+              Event Information
             </h3>
 
             <div className="space-y-8">
@@ -132,55 +141,106 @@ const AcademicContactPage = () => {
               </ul>
             </div>
           </div>
+        </div>
 
-          {/* Committee Information - Right Column */}
-          <div className="order-1 lg:order-2">
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">
-              Organizing Committee
-            </h3>
-
-            <div className="space-y-6">
-              {/* All Organizers with Uniform Style */}
-              <div className="grid grid-cols-1 gap-4">
-                {organizers.map((person, index) => (
-                  <div
-                    key={index}
-                    className="bg-white rounded-xl p-4 border border-gray-100 hover:shadow-md hover:border-blue-100 transition-all flex items-center gap-4 group"
-                  >
-                    <div className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-2 border-gray-100 flex-shrink-0 group-hover:border-[#0D4BA0] transition-colors relative">
-                      <Image
-                        src={person.image}
-                        alt={person.name}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-
-                    <div className="flex-1 min-w-0">
-                      {person.role === 'convenor' && (
-                        <span className="inline-block bg-[#0D4BA0] text-white text-xs font-bold px-2 py-0.5 rounded-full uppercase tracking-wider mb-1">
-                          Convenor
-                        </span>
-                      )}
-                      <h4 className="font-bold text-gray-900 truncate">
-                        {person.name}
-                      </h4>
-                      <p className="text-[#0D4BA0] font-medium text-xs md:text-sm mb-0.5 truncate">
-                        {person.title}
-                      </p>
-                      {person.phone && (
-                        <div className="flex items-center gap-1.5 text-gray-500 text-xs md:text-sm mt-1">
-                          <Phone className="w-3.5 h-3.5" />
-                          <a href={`tel:${person.phone}`} className="hover:text-[#0D4BA0] transition-colors">
-                            {person.phone}
-                          </a>
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                ))}
-              </div>
+        {/* Organizing Committee Section - Similar to Student Coordinators */}
+        <div className="mt-20">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-3 mb-6">
+              <div className="h-0.5 w-12 bg-gradient-to-r from-[#0D4BA0] to-transparent"></div>
+              <span className="text-[#0D4BA0] font-bold tracking-widest uppercase text-xs md:text-sm">Faculty Leadership</span>
+              <div className="h-0.5 w-12 bg-gradient-to-l from-[#0D4BA0] to-transparent"></div>
             </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Organizing <span className="bg-gradient-to-r from-[#0D4BA0] to-[#1E6FE8] bg-clip-text text-transparent">Committee</span>
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Distinguished faculty members guiding VIVID 10.0 with their expertise and vision
+            </p>
+          </div>
+
+          {/* Organizers Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {organizers.map((organizer, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-200 hover:shadow-2xl hover:border-blue-200 transition-all duration-300 hover:-translate-y-2 group"
+              >
+                {/* Image Section */}
+                <div className="relative w-full aspect-[4/5] bg-gradient-to-br from-blue-50 to-indigo-50 overflow-hidden">
+                  <Image
+                    src={organizer.image}
+                    alt={organizer.name}
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  {/* Role Badge */}
+                  {organizer.role === 'convenor' && (
+                    <div className="absolute top-4 left-4 bg-[#0D4BA0] text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider shadow-lg">
+                      Convenor
+                    </div>
+                  )}
+                </div>
+
+                {/* Info Section */}
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-1">
+                    {organizer.name}
+                  </h3>
+                  <p className="text-[#0D4BA0] font-semibold text-sm mb-1">
+                    {organizer.title}
+                  </p>
+                  <p className="text-gray-600 text-sm mb-4">
+                    {organizer.department}
+                  </p>
+
+                  {/* Contact Info */}
+                  <div className="space-y-2 pt-4 border-t border-gray-100">
+                    {/* Email */}
+                    <a
+                      href={`mailto:${organizer.email}`}
+                      className="flex items-center gap-2 text-gray-600 hover:text-[#0D4BA0] transition-colors text-sm group/link"
+                    >
+                      <div className="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center group-hover/link:bg-blue-100 transition-colors">
+                        <Mail className="w-4 h-4 text-[#0D4BA0]" />
+                      </div>
+                      <span className="truncate">{organizer.email}</span>
+                    </a>
+
+                    {/* Phone */}
+                    <a
+                      href={`tel:${organizer.phone}`}
+                      className="flex items-center gap-2 text-gray-600 hover:text-[#0D4BA0] transition-colors text-sm group/link"
+                    >
+                      <div className="w-8 h-8 rounded-lg bg-green-50 flex items-center justify-center group-hover/link:bg-green-100 transition-colors">
+                        <Phone className="w-4 h-4 text-green-600" />
+                      </div>
+                      <span>{organizer.phone}</span>
+                    </a>
+
+                    {/* LinkedIn */}
+                    <a
+                      href={organizer.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-gray-600 hover:text-[#0D4BA0] transition-colors text-sm group/link"
+                    >
+                      <div className="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center group-hover/link:bg-blue-100 transition-colors">
+                        <Linkedin className="w-4 h-4 text-blue-600" />
+                      </div>
+                      <span>LinkedIn Profile</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Additional Note */}
+          <div className="mt-12 text-center">
+            <p className="text-gray-600 text-sm md:text-base italic">
+              For academic queries and event coordination, reach out to any member of the organizing committee
+            </p>
           </div>
         </div>
       </div>
