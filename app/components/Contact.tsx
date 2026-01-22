@@ -39,9 +39,6 @@ const AcademicContactPage = () => {
     }
   ];
 
-  const convenor = organizers.find(p => p.role === 'convenor');
-  const otherOrganizers = organizers.filter(p => p.role !== 'convenor');
-
   return (
     <section id="contact" className="py-20 md:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -143,31 +140,9 @@ const AcademicContactPage = () => {
             </h3>
 
             <div className="space-y-6">
-              {/* Convenor Section */}
-              {convenor && (
-                <div className="bg-white rounded-xl overflow-hidden shadow-lg border border-blue-100 mb-8 transform hover:scale-[1.02] transition-all duration-300">
-                  <div className="relative w-full aspect-[4/3] bg-gray-100">
-                    <Image
-                      src={convenor.image}
-                      alt={convenor.name}
-                      fill
-                      className="object-contain"
-                    />
-                    <div className="absolute top-4 right-4 bg-[#0D4BA0] text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-md">
-                      Convenor
-                    </div>
-                  </div>
-                  <div className="p-6 text-center">
-                    <h4 className="font-bold text-xl text-gray-900 mb-1">{convenor.name}</h4>
-                    <p className="text-[#0D4BA0] font-semibold mb-2">{convenor.title}</p>
-                    <p className="text-gray-600 text-sm">{convenor.department}</p>
-                  </div>
-                </div>
-              )}
-
-              {/* Other Organizers */}
+              {/* All Organizers with Uniform Style */}
               <div className="grid grid-cols-1 gap-4">
-                {otherOrganizers.map((person, index) => (
+                {organizers.map((person, index) => (
                   <div
                     key={index}
                     className="bg-white rounded-xl p-4 border border-gray-100 hover:shadow-md hover:border-blue-100 transition-all flex items-center gap-4 group"
@@ -182,6 +157,11 @@ const AcademicContactPage = () => {
                     </div>
 
                     <div className="flex-1 min-w-0">
+                      {person.role === 'convenor' && (
+                        <span className="inline-block bg-[#0D4BA0] text-white text-xs font-bold px-2 py-0.5 rounded-full uppercase tracking-wider mb-1">
+                          Convenor
+                        </span>
+                      )}
                       <h4 className="font-bold text-gray-900 truncate">
                         {person.name}
                       </h4>
@@ -201,26 +181,6 @@ const AcademicContactPage = () => {
                 ))}
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* Department Info */}
-        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 md:p-12 border border-blue-200">
-          <div className="max-w-3xl mx-auto">
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 text-center">
-              About SSN College of Engineering
-            </h3>
-            <p className="text-gray-700 leading-relaxed mb-6">
-              SSN Institutions, founded by <span className="font-semibold">Dr. Shiv Nadar</span>, Chairman of HCL Technologies,
-              stands as a premier center of higher learning. With a steadfast commitment to pursuing excellence in education
-              and research, SSN College of Engineering offers comprehensive graduate, undergraduate, and research programs
-              across multiple disciplines.
-            </p>
-            <p className="text-gray-700 leading-relaxed">
-              The <span className="font-semibold">Department of Information Technology</span>, established in 1999, continues
-              to provide quality education while imparting IT excellence. The department is dedicated to creating responsible
-              technologists and industry professionals who contribute meaningfully to society and the technology sector.
-            </p>
           </div>
         </div>
       </div>

@@ -4,6 +4,8 @@ import Tracks from "./components/Tracks";
 import EventDetails from "./components/Details";
 import RoadMap from "./components/Timeline";
 import Gallery from "./components/Gallery";
+import Sponsors from "./components/Sponsors";
+import StudentCoordinators from "./components/StudentCoordinators";
 import AcademicContactPage from "./components/Contact";
 
 export default function Home() {
@@ -15,6 +17,8 @@ export default function Home() {
       <EventDetails />
       <RoadMap />
       <Gallery />
+      <Sponsors />
+      <StudentCoordinators />
       <AcademicContactPage />
     </main>
   );

@@ -83,7 +83,7 @@ const EventDetails = () => {
                       <h4 className="font-bold text-lg text-gray-900">SSN College Participants</h4>
                     </div>
                     <p className="text-gray-600 ml-10">
-                      <span className="font-bold text-[#0D4BA0]">₹200 + GST</span> (for entire team, only if shortlisted for Phase 2)
+                      <span className="font-bold text-[#0D4BA0]">₹500 + GST</span> (for entire team, only if shortlisted for Phase 2)
                     </p>
                   </div>
                 </div>
