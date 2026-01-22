@@ -57,9 +57,7 @@ const Gallery = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             <span className="bg-gradient-to-r from-[#0D4BA0] to-[#1E6FE8] bg-clip-text text-transparent">Gallery</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Explore moments from VIVID and SSN College of Engineering
-          </p>
+         
         </div>
 
         {/* Carousel */}
@@ -95,21 +93,7 @@ const Gallery = () => {
           </div>
         </div>
 
-        {/* Bottom CTA */}
-        <div className="mt-12 md:mt-16 p-8 md:p-10 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl border border-blue-200 text-center">
-          <h3 className="text-2xl font-bold text-gray-900 mb-3">
-            Don't miss important deadlines!
-          </h3>
-          <p className="text-gray-600 mb-6">
-            Mark these dates and ensure your team submits before the final deadline
-          </p>
-          <a 
-            href="#"
-            className="inline-flex items-center gap-2 px-6 py-2 bg-[#0D4BA0] text-white font-semibold rounded-lg hover:bg-[#0a3d87] transition-all hover:shadow-lg"
-          >
-            Download Calendar
-          </a>
-        </div>
+        
       </div>
     </section>
   );
