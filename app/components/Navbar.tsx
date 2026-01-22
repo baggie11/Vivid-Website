@@ -49,7 +49,7 @@ const Navbar = () => {
             aria-label="SSN College Home"
           >
             {/* Vivid Logo Icon */}
-            <div className="relative h-12 w-12 md:h-14 md:w-14 overflow-hidden rounded-full border-2 border-gray-100 shadow-md flex-shrink-0 bg-white">
+            <div className="relative h-12 w-12 md:h-14 md:w-14 overflow-hidden  flex-shrink-0 bg-white">
               <Image
                 src="/images/vivid.jpg"
                 alt="Vivid Logo"
