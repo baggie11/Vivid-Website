@@ -54,6 +54,7 @@ const Navbar = () => {
             aria-label="SSN College Home"
           >
            
+
             {/* VIVID Logo */}
             <div className="relative h-12 w-12 md:h-14 md:w-14 overflow-hidden rounded-md flex-shrink-0">
               <Image

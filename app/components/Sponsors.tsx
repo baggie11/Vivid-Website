@@ -41,7 +41,7 @@ const Sponsors = () => {
                     alt="SSN Institutions Logo"
                     width={400}
                     height={400}
-                    className="object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-300"
+                    className="hover:scale-105 transition-transform duration-300"
                     priority
                   />
                 </div>
@@ -60,14 +60,7 @@ const Sponsors = () => {
             </div>
           </div>
 
-          {/* Additional Info */}
-          <div className="mt-12 text-center">
-            <p className="text-gray-600 text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
-              SSN College of Engineering stands as a premier institution dedicated to excellence in education, 
-              research, and innovation. With world-class infrastructure and a commitment to nurturing future leaders, 
-              SSN continues to shape the technological landscape of tomorrow.
-            </p>
-          </div>
+    
         </div>
 
         {/* Decorative Elements */}

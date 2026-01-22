@@ -272,6 +272,10 @@ const AcademicContactPage = () => {
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
+                   {/* Role Badge */}
+                <div className="absolute top-2 left-2 bg-[#0D4BA0] text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider shadow-lg">
+                  Organizer
+                </div>
                 </div>
 
                 {/* Info Section */}
