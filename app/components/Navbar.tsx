@@ -48,7 +48,7 @@ const Navbar = () => {
             className="flex items-center gap-3 group focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0D4BA0] rounded"
             aria-label="SSN College Home"
           >
-            {/* Vivid Logo Icon - Reduced and made same size */}
+            {/* Vivid Logo Icon */}
             <div className="relative h-12 w-12 md:h-14 md:w-14 overflow-hidden rounded-full border-2 border-gray-100 shadow-md flex-shrink-0 bg-white">
               <Image
                 src="/images/vivid.jpg"
@@ -59,10 +59,10 @@ const Navbar = () => {
               />
             </div>
 
-            {/* Divider - Adjusted height to match logos */}
+            {/* Divider */}
             <div className="h-8 w-[1px] bg-gray-300 hidden sm:block"></div>
 
-            {/* VIVID Logo - Made same size as vivid logo */}
+            {/* VIVID Logo */}
             <div className="relative h-12 w-12 md:h-14 md:w-14 overflow-hidden rounded-md flex-shrink-0">
               <Image
                 src="/images/logo.png"
@@ -119,11 +119,13 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation - Fixed to ensure Register button is visible */}
         <div
           id="mobile-menu"
-          className={`lg:hidden overflow-hidden transition-all duration-300 ${
-            isOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'
+          className={`lg:hidden transition-all duration-300 ease-in-out ${
+            isOpen 
+              ? 'max-h-[500px] opacity-100 overflow-y-auto' 
+              : 'max-h-0 opacity-0 overflow-hidden'
           }`}
         >
           <div className="py-4 space-y-2 border-t border-gray-200">
@@ -141,13 +143,16 @@ const Navbar = () => {
                 {item.name}
               </Link>
             ))}
-
-            <button
-              className="w-full mt-4 px-4 py-3 rounded-lg text-white font-semibold bg-[#0D4BA0] hover:bg-[#0a3d87] transition-colors"
-              aria-label="Register for VIVID 10.0"
-            >
-              Register Now
-            </button>
+            
+            {/* Register Button with proper spacing */}
+            <div className="pt-4 mt-2 border-t border-gray-100">
+              <button
+                className="w-full px-4 py-3 rounded-lg text-white font-semibold bg-[#0D4BA0] hover:bg-[#0a3d87] transition-colors shadow-sm"
+                aria-label="Register for VIVID 10.0"
+              >
+                Register Now
+              </button>
+            </div>
           </div>
         </div>
       </div>
