@@ -5,17 +5,18 @@ import { Mail, Phone, MapPin, Globe, Linkedin } from 'lucide-react';
 import Image from 'next/image';
 
 const AcademicContactPage = () => {
+  const convenor = {
+    name: "Dr. A. Shahina",
+    title: "Professor & Head of Department",
+    department: "Department of Information Technology",
+    image: "/images/hod.jpg",
+    email: "shahina@ssn.edu.in",
+    phone: "+91 98765 43210",
+    linkedin: "https://linkedin.com/in/shahina",
+    role: "convenor"
+  };
+
   const organizers = [
-    {
-      name: "Dr. A. Shahina",
-      title: "Professor & Head of Department",
-      department: "Department of Information Technology",
-      image: "/images/hod.jpg",
-      email: "shahina@ssn.edu.in",
-      phone: "+91 98765 43210",
-      linkedin: "https://linkedin.com/in/shahina",
-      role: "convenor"
-    },
     {
       name: "Dr. I. Joe Louis Paul",
       title: "Associate Professor",
@@ -186,42 +187,107 @@ const AcademicContactPage = () => {
           </div>
 
           {/* Organizers Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Convenor - Full Width */}
+          <div className="max-w-xs mx-auto mb-10">
+            <div className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200 hover:shadow-2xl hover:border-blue-200 transition-all duration-300 hover:-translate-y-2 group">
+              {/* Image Section */}
+              <div className="relative w-full aspect-[3/4] bg-gradient-to-br from-blue-50 to-indigo-50 overflow-hidden">
+                <Image
+                  src={convenor.image}
+                  alt={convenor.name}
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                {/* Role Badge */}
+                <div className="absolute top-3 left-3 bg-[#0D4BA0] text-white text-xs font-bold px-2.5 py-1 rounded-full uppercase tracking-wider shadow-lg">
+                  Convenor
+                </div>
+              </div>
+
+              {/* Info Section */}
+              <div className="p-4">
+                <h3 className="text-lg font-bold text-gray-900 mb-1">
+                  {convenor.name}
+                </h3>
+                <p className="text-[#0D4BA0] font-semibold text-xs mb-1">
+                  {convenor.title}
+                </p>
+                <p className="text-gray-600 text-xs mb-3">
+                  {convenor.department}
+                </p>
+
+                {/* Contact Info */}
+                <div className="space-y-1.5 pt-3 border-t border-gray-100">
+                  {/* Email */}
+                  <a
+                    href={`mailto:${convenor.email}`}
+                    className="flex items-center gap-2 text-gray-600 hover:text-[#0D4BA0] transition-colors text-sm group/link"
+                  >
+                    <div className="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center group-hover/link:bg-blue-100 transition-colors">
+                      <Mail className="w-4 h-4 text-[#0D4BA0]" />
+                    </div>
+                    <span className="truncate">{convenor.email}</span>
+                  </a>
+
+                  {/* Phone */}
+                  <a
+                    href={`tel:${convenor.phone}`}
+                    className="flex items-center gap-2 text-gray-600 hover:text-[#0D4BA0] transition-colors text-sm group/link"
+                  >
+                    <div className="w-8 h-8 rounded-lg bg-green-50 flex items-center justify-center group-hover/link:bg-green-100 transition-colors">
+                      <Phone className="w-4 h-4 text-green-600" />
+                    </div>
+                    <span>{convenor.phone}</span>
+                  </a>
+
+                  {/* LinkedIn */}
+                  <a
+                    href={convenor.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-gray-600 hover:text-[#0D4BA0] transition-colors text-sm group/link"
+                  >
+                    <div className="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center group-hover/link:bg-blue-100 transition-colors">
+                      <Linkedin className="w-4 h-4 text-blue-600" />
+                    </div>
+                    <span>LinkedIn Profile</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Other Faculty Coordinators - 3 Column Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {organizers.map((organizer, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-200 hover:shadow-2xl hover:border-blue-200 transition-all duration-300 hover:-translate-y-2 group"
+                className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200 hover:shadow-2xl hover:border-blue-200 transition-all duration-300 hover:-translate-y-2 group"
               >
                 {/* Image Section */}
-                <div className="relative w-full aspect-[4/5] bg-gradient-to-br from-blue-50 to-indigo-50 overflow-hidden">
+                <div className="relative w-full aspect-[3/4] bg-gradient-to-br from-blue-50 to-indigo-50 overflow-hidden">
                   <Image
                     src={organizer.image}
                     alt={organizer.name}
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  {/* Role Badge */}
-                  {organizer.role === 'convenor' && (
-                    <div className="absolute top-4 left-4 bg-[#0D4BA0] text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider shadow-lg">
-                      Convenor
-                    </div>
-                  )}
                 </div>
 
                 {/* Info Section */}
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-1">
+                <div className="p-4">
+                  <h3 className="text-lg font-bold text-gray-900 mb-1">
                     {organizer.name}
                   </h3>
-                  <p className="text-[#0D4BA0] font-semibold text-sm mb-1">
+                  <p className="text-[#0D4BA0] font-semibold text-xs mb-1">
                     {organizer.title}
                   </p>
-                  <p className="text-gray-600 text-sm mb-4">
+                  <p className="text-gray-600 text-xs mb-3">
                     {organizer.department}
                   </p>
 
                   {/* Contact Info */}
-                  <div className="space-y-2 pt-4 border-t border-gray-100">
+                  <div className="space-y-1.5 pt-3 border-t border-gray-100">
                     {/* Email */}
                     <a
                       href={`mailto:${organizer.email}`}
