@@ -88,7 +88,7 @@ const Navbar = () => {
 
             {/* CTA Button */}
             <button
-              className="ml-4 px-6 py-2 rounded-lg text-white font-semibold bg-[#0D4BA0] hover:bg-[#0a3d87] hover:shadow-md transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              className="ml-4 px-6 py-2 rounded-lg text-white font-semibold bg-[#0D4BA0] hover:bg-[#0a3d87] hover:shadow-md transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white md:mr-[-130px]"
               aria-label="Register for VIVID 10.0"
             >
               Register
