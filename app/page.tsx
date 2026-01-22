@@ -19,8 +19,8 @@ export default function Home() {
       <RoadMap />
       <Gallery />
       <Sponsors />
-      <StudentCoordinators />
       <AcademicContactPage />
+      <StudentCoordinators />
       <Footer />
     </main>
   );
