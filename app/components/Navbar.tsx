@@ -50,19 +50,6 @@ const Navbar = () => {
             className="flex items-center gap-3 group focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0D4BA0] rounded"
             aria-label="SSN College Home"
           >
-            {/* Vivid Logo Icon */}
-            <div className="relative h-12 w-12 md:h-14 md:w-14 overflow-hidden  flex-shrink-0 bg-white">
-              <Image
-                src="/images/vivid.jpg"
-                alt="Vivid Logo"
-                fill
-                className="object-cover hover:scale-110 transition-transform duration-300"
-                sizes="(max-width: 768px) 48px, 56px"
-              />
-            </div>
-
-            {/* Divider */}
-            <div className="h-8 w-[1px] bg-gray-300 hidden sm:block"></div>
 
             {/* VIVID Logo */}
             <div className="relative h-12 w-12 md:h-14 md:w-14 overflow-hidden rounded-md flex-shrink-0">
