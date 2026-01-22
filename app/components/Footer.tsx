@@ -21,21 +21,15 @@ const Footer = () => {
               A premier national-level project competition organized by the Department of Information Technology, SSN College of Engineering.
             </p>
             <div className="flex gap-3">
-              <a href="#" className="w-10 h-10 rounded-lg bg-slate-700 hover:bg-blue-600 flex items-center justify-center transition-all hover:scale-110" aria-label="Facebook">
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-lg bg-slate-700 hover:bg-blue-400 flex items-center justify-center transition-all hover:scale-110" aria-label="Twitter">
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-lg bg-slate-700 hover:bg-pink-600 flex items-center justify-center transition-all hover:scale-110" aria-label="Instagram">
+              
+              <a href="https://www.instagram.com/ssn_ait?igsh=MWhpbWNyN3FkYWhvdg" className="w-10 h-10 rounded-lg bg-slate-700 hover:bg-pink-600 flex items-center justify-center transition-all hover:scale-110" aria-label="Instagram">
                 <Instagram className="w-5 h-5" />
+                
               </a>
-              <a href="#" className="w-10 h-10 rounded-lg bg-slate-700 hover:bg-blue-700 flex items-center justify-center transition-all hover:scale-110" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/company/ssn-ait/posts/?feedView=all" className="w-10 h-10 rounded-lg bg-slate-700 hover:bg-blue-700 flex items-center justify-center transition-all hover:scale-110" aria-label="LinkedIn">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-lg bg-slate-700 hover:bg-red-600 flex items-center justify-center transition-all hover:scale-110" aria-label="YouTube">
-                <Youtube className="w-5 h-5" />
-              </a>
+              
             </div>
           </div>
 
@@ -126,15 +120,7 @@ const Footer = () => {
                   </p>
                 </div>
               </li>
-              <li className="flex items-start gap-3">
-                <Phone className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
-                <div>
-                  <p className="text-sm text-gray-500 mb-1">Phone</p>
-                  <a href="tel:+914427469700" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
-                    +91 44 2746 9700
-                  </a>
-                </div>
-              </li>
+             
             </ul>
           </div>
         </div>
@@ -149,12 +135,7 @@ const Footer = () => {
               © {currentYear} VIVID 10.0 - Department of Information Technology, SSN College of Engineering. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm">
-              <Link href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
-                Privacy Policy
-              </Link>
-              <Link href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
-                Terms of Service
-              </Link>
+             
             </div>
           </div>
         </div>
