@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Calendar, Download, Upload, Sparkles, ArrowRight } from 'lucide-react';
 
 const Hero = () => {
@@ -18,11 +19,21 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen bg-cover bg-center overflow-hidden pt-16 md:pt-20"
-      style={{ backgroundImage: 'url(/images/ssn.jpg)' }}
+      className="relative min-h-screen overflow-hidden pt-16 md:pt-20"
     >
+      {/* Optimized Background Image */}
+      <Image
+        src="/images/ssn.jpg"
+        alt="SSN College of Engineering"
+        fill
+        priority
+        quality={100}
+        sizes="100vw"
+        className="object-cover object-center"
+      />
+      
       {/* Overlay for readability */}
-      <div className="absolute inset-0 bg-white/50"></div>
+      <div className="absolute inset-0 bg-white/50 z-[1]"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-24">
         <div className="text-center">
