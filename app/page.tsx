@@ -7,6 +7,7 @@ import Gallery from "./components/Gallery";
 import Sponsors from "./components/Sponsors";
 import StudentCoordinators from "./components/StudentCoordinators";
 import AcademicContactPage from "./components/Contact";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <Sponsors />
       <StudentCoordinators />
       <AcademicContactPage />
+      <Footer />
     </main>
   );
 }

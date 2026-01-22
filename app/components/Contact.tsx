@@ -49,7 +49,7 @@ const AcademicContactPage = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 md:py-28 bg-white">
+    <section id="contact" className="py-20 md:py-28 bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16 md:mb-20">
@@ -67,14 +67,14 @@ const AcademicContactPage = () => {
         </div>
 
         {/* Main Contact Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 mb-24">
           {/* Contact Information */}
-          <div className="order-2 lg:order-1">
+          <div className="bg-white rounded-2xl p-8 md:p-10 shadow-lg border border-gray-200">
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">
               Event Information
             </h3>
 
-            <div className="space-y-8">
+            <div className="space-y-6">
               {/* Email */}
               <div className="flex gap-4">
                 <div className="w-14 h-14 rounded-xl bg-blue-100 flex items-center justify-center flex-shrink-0">
@@ -82,7 +82,7 @@ const AcademicContactPage = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-gray-900 mb-1">Email</h4>
-                  <a href="mailto:vivid25@it.ssn.edu.in" className="text-[#0D4BA0] hover:text-[#0a3d87] transition-colors">
+                  <a href="mailto:vivid25@it.ssn.edu.in" className="text-[#0D4BA0] hover:text-[#0a3d87] transition-colors break-all">
                     vivid25@it.ssn.edu.in
                   </a>
                 </div>
@@ -118,27 +118,53 @@ const AcademicContactPage = () => {
                 </div>
               </div>
             </div>
+          </div>
 
-            {/* Quick Links */}
-            <div className="mt-10 p-6 bg-blue-50 rounded-xl border border-blue-200">
-              <h4 className="font-bold text-gray-900 mb-4">Quick Links</h4>
-              <ul className="space-y-2">
-                <li>
-                  <a href="https://forms.gle/qUdaBkHGURLt1d7eA" target="_blank" rel="noopener noreferrer" className="text-[#0D4BA0] hover:text-[#0a3d87] transition-colors flex items-center gap-2">
-                    <span>→</span> Project Submission Form
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-[#0D4BA0] hover:text-[#0a3d87] transition-colors flex items-center gap-2">
-                    <span>→</span> Download Rules & Regulations
-                  </a>
-                </li>
-                <li>
-                  <a href="#timeline" className="text-[#0D4BA0] hover:text-[#0a3d87] transition-colors flex items-center gap-2">
-                    <span>→</span> Event Timeline
-                  </a>
-                </li>
-              </ul>
+          {/* Quick Links Card */}
+          <div className="bg-white rounded-2xl p-8 md:p-10 shadow-lg border border-gray-200">
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">
+              Quick Links
+            </h3>
+            <div className="space-y-4">
+              <a href="https://forms.gle/qUdaBkHGURLt1d7eA" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 bg-blue-50 rounded-xl hover:bg-blue-100 transition-colors group">
+                <div className="w-12 h-12 rounded-lg bg-[#0D4BA0] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                  <span className="text-white font-bold text-lg">→</span>
+                </div>
+                <div>
+                  <h4 className="font-bold text-gray-900 group-hover:text-[#0D4BA0] transition-colors">Project Submission</h4>
+                  <p className="text-sm text-gray-600">Submit your innovative project</p>
+                </div>
+              </a>
+
+              <a href="#timeline" className="flex items-center gap-4 p-4 bg-purple-50 rounded-xl hover:bg-purple-100 transition-colors group">
+                <div className="w-12 h-12 rounded-lg bg-purple-600 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                  <span className="text-white font-bold text-lg">→</span>
+                </div>
+                <div>
+                  <h4 className="font-bold text-gray-900 group-hover:text-purple-600 transition-colors">Event Timeline</h4>
+                  <p className="text-sm text-gray-600">View important dates</p>
+                </div>
+              </a>
+
+              <a href="#tracks" className="flex items-center gap-4 p-4 bg-emerald-50 rounded-xl hover:bg-emerald-100 transition-colors group">
+                <div className="w-12 h-12 rounded-lg bg-emerald-600 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                  <span className="text-white font-bold text-lg">→</span>
+                </div>
+                <div>
+                  <h4 className="font-bold text-gray-900 group-hover:text-emerald-600 transition-colors">Competition Tracks</h4>
+                  <p className="text-sm text-gray-600">Explore available categories</p>
+                </div>
+              </a>
+
+              <a href="#rules" className="flex items-center gap-4 p-4 bg-orange-50 rounded-xl hover:bg-orange-100 transition-colors group">
+                <div className="w-12 h-12 rounded-lg bg-orange-600 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                  <span className="text-white font-bold text-lg">→</span>
+                </div>
+                <div>
+                  <h4 className="font-bold text-gray-900 group-hover:text-orange-600 transition-colors">Rules & Guidelines</h4>
+                  <p className="text-sm text-gray-600">Download complete rulebook</p>
+                </div>
+              </a>
             </div>
           </div>
         </div>
