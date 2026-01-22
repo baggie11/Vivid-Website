@@ -81,10 +81,10 @@ const StudentCoordinators = () => {
           {coordinators.map((coordinator, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-200 hover:shadow-2xl hover:border-blue-200 transition-all duration-300 hover:-translate-y-2 group"
+              className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200 hover:shadow-2xl hover:border-blue-200 transition-all duration-300 hover:-translate-y-2 group"
             >
               {/* Image Section */}
-              <div className="relative w-full aspect-[4/5] bg-gradient-to-br from-blue-50 to-indigo-50 overflow-hidden">
+              <div className="relative w-full aspect-[3/4] bg-gradient-to-br from-blue-50 to-indigo-50 overflow-hidden">
                 <Image
                   src={coordinator.image}
                   alt={coordinator.name}
@@ -92,25 +92,25 @@ const StudentCoordinators = () => {
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 {/* Role Badge */}
-                <div className="absolute top-4 left-4 bg-[#0D4BA0] text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider shadow-lg">
+                <div className="absolute top-3 left-3 bg-[#0D4BA0] text-white text-xs font-bold px-2.5 py-1 rounded-full uppercase tracking-wider shadow-lg">
                   {coordinator.role}
                 </div>
               </div>
 
               {/* Info Section */}
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-1">
+              <div className="p-4">
+                <h3 className="text-lg font-bold text-gray-900 mb-1">
                   {coordinator.name}
                 </h3>
-                <p className="text-gray-600 text-sm mb-1">
+                <p className="text-gray-600 text-xs mb-1">
                   {coordinator.department}
                 </p>
-                <p className="text-[#0D4BA0] font-semibold text-sm mb-4">
+                <p className="text-[#0D4BA0] font-semibold text-xs mb-3">
                   {coordinator.year}
                 </p>
 
                 {/* Contact Info */}
-                <div className="space-y-2 pt-4 border-t border-gray-100">
+                <div className="space-y-1.5 pt-3 border-t border-gray-100">
                   {/* Email */}
                   <a
                     href={`mailto:${coordinator.email}`}
