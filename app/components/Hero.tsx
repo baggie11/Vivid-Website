@@ -45,15 +45,24 @@ const Hero = () => {
             </span>
           </div>
 
-          {/* Main Title */}
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6 leading-tight">
-            <span className="block text-gray-900">VIVID</span>
-            <span className="block mt-4">
+          {/* Main Title with Logo */}
+          <div className="flex flex-col items-center justify-center mb-6">
+            {/* VIVID Logo Image */}
+            <div className="mb-4">
+              <img 
+                src="/images/vivid.png" 
+                alt="VIVID 10.0" 
+                className="h-[80px] sm:h-[100px] md:h-[120px] lg:h-[150px] xl:h-[180px] w-auto" 
+              />
+            </div>
+            
+            {/* VIVID 10.0 Text */}
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight leading-tight">
               <span className="bg-gradient-to-r from-[#0D4BA0] via-blue-600 to-[#1E6FE8] bg-clip-text text-transparent font-black">
                 10.0
               </span>
-            </span>
-          </h1>
+            </h1>
+          </div>
 
           {/* Divider */}
           <div className="flex items-center justify-center gap-4 mb-8">
@@ -89,10 +98,10 @@ const Hero = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 w-full">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <Link
               href="#"
-              className="group flex items-center justify-center gap-3 px-8 py-4 bg-white border-2 border-gray-200 rounded-xl hover:border-[#0D4BA0] hover:shadow-md transition-colors duration-200 w-full sm:w-auto"
+              className="group flex items-center justify-center gap-3 px-8 py-4 bg-white border-2 border-gray-200 rounded-xl hover:border-[#0D4BA0] hover:shadow-md transition-colors duration-200 w-full sm:w-auto max-w-sm"
               aria-label="Download project template document"
             >
               <Download className="w-5 h-5 text-[#0D4BA0] group-hover:scale-110 transition-transform" aria-hidden="true" />
@@ -105,7 +114,7 @@ const Hero = () => {
               href="https://forms.gle/qUdaBkHGURLt1d7eA"
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-[#0D4BA0] to-blue-700 rounded-xl hover:from-[#0a3d87] hover:to-blue-800 hover:shadow-md transition-colors duration-200 w-full sm:w-auto font-bold text-white"
+              className="group flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-[#0D4BA0] to-blue-700 rounded-xl hover:from-[#0a3d87] hover:to-blue-800 hover:shadow-md transition-colors duration-200 w-full sm:w-auto max-w-sm font-bold text-white"
               aria-label="Submit your project"
             >
               <Upload className="w-5 h-5 group-hover:scale-110 transition-transform" aria-hidden="true" />
