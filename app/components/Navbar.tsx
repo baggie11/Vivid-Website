@@ -54,18 +54,16 @@ const Navbar = () => {
             aria-label="SSN College Home"
           >
            
-
-            {/* VIVID Logo */}
-            <div className="relative h-12 w-12 md:h-14 md:w-14 overflow-hidden rounded-md flex-shrink-0">
-              <Image
-                src="/images/logo.png"
-                alt="VIVID 10.0 Logo"
-                fill
-                className="object-contain group-hover:scale-105 transition-transform"
-                sizes="(max-width: 768px) 48px, 56px"
-                priority
-              />
-            </div>
+            <div className="relative h-12 w-12 md:h-22 md:w-22 md:ml-[-140px] overflow-hidden rounded-md flex-shrink-0 ">
+            <Image
+              src="/images/logo.png"
+              alt="VIVID 10.0 Logo"
+              fill
+              className="object-contain group-hover:scale-105 transition-transform"
+              sizes="(max-width: 768px) 48px, 56px"
+              priority
+            />
+          </div>
           </Link>
 
           {/* Desktop Navigation */}
