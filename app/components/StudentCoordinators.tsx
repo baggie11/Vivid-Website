@@ -63,7 +63,7 @@ const StudentCoordinators = () => {
       image: "/images/vithula.png"
     },
     {
-      name: "Harishraj Selvakumar",
+      name: "Harishraj S",
       department: "Department of Information Technology",
       year: "Final Year",
       email: "harishraj2210713@ssn.edu.in",
