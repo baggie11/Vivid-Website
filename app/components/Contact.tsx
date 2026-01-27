@@ -235,19 +235,6 @@ const AcademicContactPage = () => {
                     </div>
                     <span className="truncate">{convenor.phone}</span>
                   </a>
-
-                  {/* LinkedIn */}
-                  <a
-                    href={convenor.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 text-gray-600 hover:text-[#0D4BA0] transition-colors text-[11px] group/link"
-                  >
-                    <div className="w-5 h-5 rounded-md bg-blue-50 flex items-center justify-center group-hover/link:bg-blue-100 transition-colors">
-                      <Linkedin className="w-2.5 h-2.5 text-blue-600" />
-                    </div>
-                    <span className="truncate">LinkedIn Profile</span>
-                  </a>
                 </div>
               </div>
             </div>
@@ -311,17 +298,7 @@ const AcademicContactPage = () => {
                     </a>
 
                     {/* LinkedIn */}
-                    <a
-                      href={organizer.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-1.5 text-gray-600 hover:text-[#0D4BA0] transition-colors text-[11px] group/link"
-                    >
-                      <div className="w-5 h-5 rounded-md bg-blue-50 flex items-center justify-center group-hover/link:bg-blue-100 transition-colors">
-                        <Linkedin className="w-2.5 h-2.5 text-blue-600" />
-                      </div>
-                      <span className="truncate">LinkedIn Profile</span>
-                    </a>
+                   
                   </div>
                 </div>
               </div>
