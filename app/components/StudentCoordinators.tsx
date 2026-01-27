@@ -32,21 +32,23 @@ const StudentCoordinators = () => {
       image: "/images/nitish.png"
     },
     {
-      name: "Sudharshan PS",
-      department: "Department of Information Technology",
-      year: "Final Year",
-      email: "sudharshan2210414@ssn.edu.in",
-      image: "/images/sudarshan.png"
-    }
-  ];
-
-  const row3 = [
-    {
       name: "Kavyasri VJ",
       department: "Department of Information Technology",
       year: "Final Year",
       email: "kavyasri2210393@ssn.edu.in",
       image: "/images/kavyasri.png"
+    }
+    
+  ];
+
+  const row3 = [
+    
+    {
+      name: "Sudharshan PS",
+      department: "Department of Information Technology",
+      year: "Final Year",
+      email: "sudharshan2210414@ssn.edu.in",
+      image: "/images/sudarshan.png"
     },
     {
       name: "Piriyadharshini",
