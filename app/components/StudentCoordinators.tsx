@@ -1,165 +1,289 @@
 'use client';
 
 import React from 'react';
-import { Mail, Phone, Linkedin } from 'lucide-react';
+import { Mail } from 'lucide-react';
 import Image from 'next/image';
 
 const StudentCoordinators = () => {
-  const coordinators = [
+  // Group coordinators by rows as specified
+  const row1 = [
     {
-      name: "Student Name 1",
-      role: "Lead Coordinator",
+      name: "Kathir Kaman A",
       department: "Department of Information Technology",
       year: "Final Year",
-      email: "student1@example.com",
-      phone: "+91 98765 43210",
-      linkedin: "https://linkedin.com/in/student1",
-      image: "/images/student1.jpg"
-    },
-    {
-      name: "Student Name 2",
-      role: "Technical Coordinator",
-      department: "Department of Information Technology",
-      year: "Final Year",
-      email: "student2@example.com",
-      phone: "+91 98765 43211",
-      linkedin: "https://linkedin.com/in/student2",
-      image: "/images/student2.jpg"
-    },
-    {
-      name: "Student Name 3",
-      role: "Marketing Coordinator",
-      department: "Department of Information Technology",
-      year: "Final Year",
-      email: "student3@example.com",
-      phone: "+91 98765 43212",
-      linkedin: "https://linkedin.com/in/student3",
-      image: "/images/student3.jpg"
-    },
-    {
-      name: "Student Name 4",
-      role: "Operations Coordinator",
-      department: "Department of Information Technology",
-      year: "Final Year",
-      email: "student4@example.com",
-      phone: "+91 98765 43213",
-      linkedin: "https://linkedin.com/in/student4",
-      image: "/images/student4.jpg"
-    },
-    {
-      name: "Student Name 5",
-      role: "Events Coordinator",
-      department: "Department of Information Technology",
-      year: "Final Year",
-      email: "student5@example.com",
-      phone: "+91 98765 43214",
-      linkedin: "https://linkedin.com/in/student5",
-      image: "/images/student5.jpg"
+      email: "kathirkaman2210947@ssn.edu.in",
+      image: "/images/kathir.jpg"
     }
   ];
 
-  return (
-    <section id="student-coordinators" className="py-20 md:py-28 bg-gradient-to-br from-slate-50 to-blue-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-16 md:mb-20">
-          <div className="inline-flex items-center gap-3 mb-6">
-            <div className="h-0.5 w-12 bg-gradient-to-r from-[#0D4BA0] to-transparent"></div>
-            <span className="text-[#0D4BA0] font-bold tracking-widest uppercase text-xs md:text-sm">Meet the Team</span>
-            <div className="h-0.5 w-12 bg-gradient-to-l from-[#0D4BA0] to-transparent"></div>
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Student <span className="bg-gradient-to-r from-[#0D4BA0] to-[#1E6FE8] bg-clip-text text-transparent">Coordinators</span>
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            The driving force behind VIVID 10.0 - dedicated students committed to making this event a success
-          </p>
+  const row2 = [
+    {
+      name: "Ananya Sivakumar",
+      department: "Department of Information Technology",
+      year: "Final Year",
+      email: "ananya2210316@ssn.edu.in",
+      image: "/images/ananya.png"
+    },
+    {
+      name: "Nithish Kumar S",
+      department: "Department of Information Technology",
+      year: "Final Year",
+      email: "nithishkumar2210202@ssn.edu.in",
+      image: "/images/nitish.png"
+    },
+    {
+      name: "Sudharshan PS",
+      department: "Department of Information Technology",
+      year: "Final Year",
+      email: "sudharshan2210414@ssn.edu.in",
+      image: "/images/sudarshan.png"
+    }
+  ];
+
+  const row3 = [
+    {
+      name: "Kavyasri VJ",
+      department: "Department of Information Technology",
+      year: "Final Year",
+      email: "kavyasri2210393@ssn.edu.in",
+      image: "/images/kavyasri.png"
+    },
+    {
+      name: "Piriyadharshini",
+      department: "Department of Information Technology",
+      year: "Final Year",
+      email: "piriyadharshini2210418@ssn.edu.in",
+      image: "/images/piriya.png"
+    },
+    {
+      name: "Vithula S",
+      department: "Department of Information Technology",
+      year: "Final Year",
+      email: "vithula2210417@ssn.edu.in",
+      image: "/images/vithula.png"
+    },
+    {
+      name: "Harishraj Selvakumar",
+      department: "Department of Information Technology",
+      year: "Final Year",
+      email: "harishraj2210713@ssn.edu.in",
+      image: "/images/harishraj.png"
+    }
+  ];
+
+  // Render card component
+  const renderCard = (coordinator: typeof row1[0], index: number) => (
+    <div
+      key={index}
+      className="bg-white rounded-lg overflow-hidden shadow-md border border-gray-200 hover:shadow-xl hover:border-blue-200 transition-all duration-300 hover:-translate-y-1 group"
+    >
+      {/* Image Section */}
+      <div className="relative w-full aspect-[3/4] bg-gradient-to-br from-blue-50 to-indigo-50 overflow-hidden">
+        <Image
+          src={coordinator.image}
+          alt={coordinator.name}
+          fill
+          className="object-cover group-hover:scale-105 transition-transform duration-500"
+          sizes="(max-width: 768px) 100vw, 33vw"
+        />
+      </div>
+
+      {/* Info Section */}
+      <div className="p-2">
+        <h3 className="text-sm font-bold text-gray-900 mb-0.5 line-clamp-1">
+          {coordinator.name}
+        </h3>
+        <p className="text-gray-600 text-[10px] mb-0.5 line-clamp-1">
+          {coordinator.department}
+        </p>
+        <p className="text-[#0D4BA0] font-semibold text-[10px] mb-1.5">
+          {coordinator.year}
+        </p>
+
+        {/* Contact Info */}
+        <div className="pt-1 border-t border-gray-100">
+          <a
+            href={`mailto:${coordinator.email}`}
+            className="flex items-center gap-1.5 text-gray-600 hover:text-[#0D4BA0] transition-colors text-[10px] group/link"
+          >
+            <div className="w-5 h-5 rounded-md bg-blue-50 flex items-center justify-center group-hover/link:bg-blue-100 transition-colors">
+              <Mail className="w-2.5 h-2.5 text-[#0D4BA0]" />
+            </div>
+            <span className="truncate">{coordinator.email}</span>
+          </a>
         </div>
+      </div>
+    </div>
+  );
+  return (
+  <section id="student-coordinators" className="py-16 md:py-20 bg-gradient-to-br from-slate-50 to-blue-50">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Header */}
+      <div className="text-center mb-12">
+        <div className="inline-flex items-center gap-3 mb-4">
+          <div className="h-0.5 w-8 bg-gradient-to-r from-[#0D4BA0] to-transparent"></div>
+          <span className="text-[#0D4BA0] font-bold tracking-widest uppercase text-xs">Meet the Team</span>
+          <div className="h-0.5 w-8 bg-gradient-to-l from-[#0D4BA0] to-transparent"></div>
+        </div>
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          Student <span className="bg-gradient-to-r from-[#0D4BA0] to-[#1E6FE8] bg-clip-text text-transparent">Coordinators</span>
+        </h2>
+        <p className="text-base text-gray-600 max-w-2xl mx-auto">
+          The driving force behind VIVID 10.0 - dedicated students committed to making this event a success
+        </p>
+      </div>
 
-        {/* Coordinators Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {coordinators.map((coordinator, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200 hover:shadow-2xl hover:border-blue-200 transition-all duration-300 hover:-translate-y-2 group"
-            >
-              {/* Image Section */}
-              <div className="relative w-full aspect-[1/1] bg-gradient-to-br from-blue-50 to-indigo-50 overflow-hidden">
-                <Image
-                  src={coordinator.image}
-                  alt={coordinator.name}
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                {/* Role Badge */}
-                <div className="absolute top-2 left-2 bg-[#0D4BA0] text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider shadow-lg">
-                  {coordinator.role}
-                </div>
+      {/* Square Cards Layout */}
+      
+      {/* First Row  centered */}
+      <div className="flex justify-center mb-8">
+        <div className="w-full max-w-[300px]">
+          <div className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200 hover:shadow-2xl hover:border-blue-200 transition-all duration-300 hover:-translate-y-1 group">
+            {/* Square Image Section */}
+            <div className="relative w-full aspect-square bg-gradient-to-br from-blue-50 to-indigo-50 overflow-hidden">
+              <Image
+                src={row1[0].image}
+                alt={row1[0].name}
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+                sizes="(max-width: 768px) 100vw, 33vw"
+              />
+            </div>
+
+            {/* Info Section */}
+            <div className="p-4">
+              <h3 className="text-lg font-bold text-gray-900 mb-1 line-clamp-1">
+                {row1[0].name}
+              </h3>
+              <p className="text-gray-600 text-sm mb-1 line-clamp-1">
+                {row1[0].department}
+              </p>
+              <p className="text-[#0D4BA0] font-semibold text-sm mb-3">
+                {row1[0].year}
+              </p>
+
+              {/* Contact Info */}
+              <div className="pt-3 border-t border-gray-100">
+                <a
+                  href={`mailto:${row1[0].email}`}
+                  className="flex items-center gap-2 text-gray-600 hover:text-[#0D4BA0] transition-colors text-sm group/link"
+                >
+                  <div className="w-6 h-6 rounded-lg bg-blue-50 flex items-center justify-center group-hover/link:bg-blue-100 transition-colors">
+                    <Mail className="w-4 h-4 text-[#0D4BA0]" />
+                  </div>
+                  <span className="truncate">{row1[0].email}</span>
+                </a>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-              {/* Info Section */}
-              <div className="p-3">
-                <h3 className="text-base font-bold text-gray-900 mb-0.5">
-                  {coordinator.name}
-                </h3>
-                <p className="text-gray-600 text-[11px] mb-0.5">
-                  {coordinator.department}
-                </p>
-                <p className="text-[#0D4BA0] font-semibold text-xs mb-2">
-                  {coordinator.year}
-                </p>
+      {/* Second Row  */}
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
+        {row2.map((coordinator, index) => (
+          <div key={index} className="flex justify-center">
+            <div className="w-full max-w-[300px]">
+              <div className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200 hover:shadow-2xl hover:border-blue-200 transition-all duration-300 hover:-translate-y-1 group">
+                {/* Square Image Section */}
+                <div className="relative w-full aspect-square bg-gradient-to-br from-blue-50 to-indigo-50 overflow-hidden">
+                  <Image
+                    src={coordinator.image}
+                    alt={coordinator.name}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                </div>
 
-                {/* Contact Info */}
-                <div className="space-y-1 pt-2 border-t border-gray-100">
-                  {/* Email */}
-                  <a
-                    href={`mailto:${coordinator.email}`}
-                    className="flex items-center gap-1.5 text-gray-600 hover:text-[#0D4BA0] transition-colors text-xs group/link"
-                  >
-                    <div className="w-6 h-6 rounded-lg bg-blue-50 flex items-center justify-center group-hover/link:bg-blue-100 transition-colors">
-                      <Mail className="w-3 h-3 text-[#0D4BA0]" />
-                    </div>
-                    <span className="truncate">{coordinator.email}</span>
-                  </a>
+                {/* Info Section */}
+                <div className="p-4">
+                  <h3 className="text-base font-bold text-gray-900 mb-1 line-clamp-1">
+                    {coordinator.name}
+                  </h3>
+                  <p className="text-gray-600 text-xs mb-1 line-clamp-1">
+                    {coordinator.department}
+                  </p>
+                  <p className="text-[#0D4BA0] font-semibold text-xs mb-2">
+                    {coordinator.year}
+                  </p>
 
-                  {/* Phone */}
-                  <a
-                    href={`tel:${coordinator.phone}`}
-                    className="flex items-center gap-1.5 text-gray-600 hover:text-[#0D4BA0] transition-colors text-xs group/link"
-                  >
-                    <div className="w-6 h-6 rounded-lg bg-green-50 flex items-center justify-center group-hover/link:bg-green-100 transition-colors">
-                      <Phone className="w-3 h-3 text-green-600" />
-                    </div>
-                    <span>{coordinator.phone}</span>
-                  </a>
-
-                  {/* LinkedIn */}
-                  <a
-                    href={coordinator.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 text-gray-600 hover:text-[#0D4BA0] transition-colors text-xs group/link"
-                  >
-                    <div className="w-6 h-6 rounded-lg bg-blue-50 flex items-center justify-center group-hover/link:bg-blue-100 transition-colors">
-                      <Linkedin className="w-3 h-3 text-blue-600" />
-                    </div>
-                    <span>LinkedIn Profile</span>
-                  </a>
+                  {/* Contact Info */}
+                  <div className="pt-2 border-t border-gray-100">
+                    <a
+                      href={`mailto:${coordinator.email}`}
+                      className="flex items-center gap-2 text-gray-600 hover:text-[#0D4BA0] transition-colors text-xs group/link"
+                    >
+                      <div className="w-5 h-5 rounded-md bg-blue-50 flex items-center justify-center group-hover/link:bg-blue-100 transition-colors">
+                        <Mail className="w-3 h-3 text-[#0D4BA0]" />
+                      </div>
+                      <span className="truncate">{coordinator.email}</span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-          ))}
-        </div>
-
-        {/* Additional Note */}
-        <div className="mt-12 text-center">
-          <p className="text-gray-600 text-sm md:text-base italic">
-            For any queries or assistance, feel free to reach out to any of our student coordinators
-          </p>
-        </div>
+          </div>
+        ))}
       </div>
-    </section>
-  );
-};
+
+      {/* Third Row  */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {row3.map((coordinator, index) => (
+          <div key={index} className="flex justify-center">
+            <div className="w-full max-w-[280px]">
+              <div className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200 hover:shadow-2xl hover:border-blue-200 transition-all duration-300 hover:-translate-y-1 group">
+                {/* Square Image Section */}
+                <div className="relative w-full aspect-square bg-gradient-to-br from-blue-50 to-indigo-50 overflow-hidden">
+                  <Image
+                    src={coordinator.image}
+                    alt={coordinator.name}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                </div>
+
+                {/* Info Section */}
+                <div className="p-3">
+                  <h3 className="text-sm font-bold text-gray-900 mb-1 line-clamp-1">
+                    {coordinator.name}
+                  </h3>
+                  <p className="text-gray-600 text-[11px] mb-1 line-clamp-1">
+                    {coordinator.department}
+                  </p>
+                  <p className="text-[#0D4BA0] font-semibold text-[11px] mb-2">
+                    {coordinator.year}
+                  </p>
+
+                  {/* Contact Info */}
+                  <div className="pt-2 border-t border-gray-100">
+                    <a
+                      href={`mailto:${coordinator.email}`}
+                      className="flex items-center gap-1.5 text-gray-600 hover:text-[#0D4BA0] transition-colors text-[11px] group/link"
+                    >
+                      <div className="w-5 h-5 rounded-md bg-blue-50 flex items-center justify-center group-hover/link:bg-blue-100 transition-colors">
+                        <Mail className="w-3 h-3 text-[#0D4BA0]" />
+                      </div>
+                      <span className="truncate">{coordinator.email}</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Additional Note */}
+      <div className="mt-10 text-center">
+        <p className="text-gray-600 text-sm italic">
+          For any queries or assistance, feel free to reach out to any of our student coordinators
+        </p>
+      </div>
+    </div>
+  </section>
+);
+  };
 
 export default StudentCoordinators;
