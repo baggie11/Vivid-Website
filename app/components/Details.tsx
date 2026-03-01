@@ -36,13 +36,13 @@ const EventDetails = () => {
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                     <span className="text-gray-700">
-                      Participants must be from <span className="font-bold text-[#0D4BA0]">IT, CSE, ECE, BME, MECH, or EEE</span> streams (UG/PG)
+                      Participants must be from <span className="font-bold text-[#0D4BA0]">IT, CSE, ECE,  or EEE</span> streams (UG/PG)
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                     <span className="text-gray-700">
-                      Maximum <span className="font-bold">3 members per team</span>
+               <span className="font-bold">4 members per team</span>
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
@@ -105,11 +105,11 @@ const EventDetails = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="bg-white rounded-lg p-4 border border-gray-200">
                       <p className="text-sm text-gray-600 mb-1">In-House Event</p>
-                      <p className="font-bold text-lg text-gray-900">26 March 2026</p>
+                      <p className="font-bold text-lg text-gray-900">27 March 2026</p>
                     </div>
                     <div className="bg-white rounded-lg p-4 border border-gray-200">
                       <p className="text-sm text-gray-600 mb-1">External Event</p>
-                      <p className="font-bold text-lg text-gray-900">27 March 2026</p>
+                      <p className="font-bold text-lg text-gray-900">28 March 2026</p>
                     </div>
                   </div>
                   
