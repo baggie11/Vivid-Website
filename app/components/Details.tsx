@@ -70,20 +70,10 @@ const EventDetails = () => {
                   <div className="bg-white rounded-lg p-6 border border-gray-200">
                     <div className="flex items-center gap-3 mb-2">
                       <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-[#0D4BA0] text-white text-sm font-bold">1</span>
-                      <h4 className="font-bold text-lg text-gray-900">External College Participants</h4>
+                      <h4 className="font-bold text-lg text-gray-900">All College Students</h4>
                     </div>
                     <p className="text-gray-600 ml-10">
                       <span className="font-bold text-[#0D4BA0]">₹1,000 + GST</span> (for entire team, only if shortlisted for Phase 2)
-                    </p>
-                  </div>
-                  
-                  <div className="bg-white rounded-lg p-6 border border-gray-200">
-                    <div className="flex items-center gap-3 mb-2">
-                      <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-[#0D4BA0] text-white text-sm font-bold">2</span>
-                      <h4 className="font-bold text-lg text-gray-900">SSN College Participants</h4>
-                    </div>
-                    <p className="text-gray-600 ml-10">
-                      <span className="font-bold text-[#0D4BA0]">₹500 + GST</span> (for entire team, only if shortlisted for Phase 2)
                     </p>
                   </div>
                 </div>
@@ -134,9 +124,54 @@ const EventDetails = () => {
 
           {/* Awards & Prizes */}
           <div className="bg-gradient-to-br from-amber-50 to-amber-50/50 rounded-2xl border border-amber-200 p-8 md:p-10 hover:shadow-lg transition-shadow">
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
-              🏆 Rewards & Recognition
-            </h3>
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-yellow-400 to-amber-500 flex items-center justify-center flex-shrink-0 shadow-lg">
+                <Trophy className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
+                Rewards & Recognition
+              </h3>
+            </div>
+            
+            {/* Professional Trophy Showcase */}
+            <div className="relative mb-8 flex justify-center">
+              <div className="relative w-full max-w-2xl">
+                {/* Subtle glow effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-[#0D4BA0] via-[#1E6FE8] to-[#0D4BA0] rounded-2xl blur-xl opacity-20"></div>
+                
+                {/* Main container */}
+                <div className="relative bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl p-8 md:p-12 border-2 border-[#0D4BA0] shadow-xl">
+                  <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
+                    {/* Trophy Icon */}
+                    <div className="flex-shrink-0">
+                      <div className="relative">
+                        <div className="absolute inset-0 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-full blur-md opacity-50"></div>
+                        <div className="relative bg-gradient-to-br from-yellow-400 via-amber-500 to-yellow-600 p-6 rounded-full shadow-lg">
+                          <Trophy className="w-16 h-16 md:w-20 md:h-20 text-white" strokeWidth={2.5} />
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* Text Content */}
+                    <div className="flex-1 text-center md:text-left">
+                      <h4 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
+                        Excellence Recognized
+                      </h4>
+                      <p className="text-base md:text-lg text-gray-700 font-medium">
+                        Outstanding projects will be awarded with prizes and certificates of achievement
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Corner accents */}
+                <div className="absolute -top-1 -left-1 w-6 h-6 border-t-4 border-l-4 border-[#0D4BA0] rounded-tl-lg"></div>
+                <div className="absolute -top-1 -right-1 w-6 h-6 border-t-4 border-r-4 border-[#0D4BA0] rounded-tr-lg"></div>
+                <div className="absolute -bottom-1 -left-1 w-6 h-6 border-b-4 border-l-4 border-[#0D4BA0] rounded-bl-lg"></div>
+                <div className="absolute -bottom-1 -right-1 w-6 h-6 border-b-4 border-r-4 border-[#0D4BA0] rounded-br-lg"></div>
+              </div>
+            </div>
+            
             <p className="text-gray-600 mb-6">
               Prize amounts are subject to confirmation. The organizer reserves the right to substitute with equivalent value prizes. All awards are subject to VIVID 10.0 terms & conditions.
             </p>
