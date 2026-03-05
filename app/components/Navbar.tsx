@@ -17,7 +17,7 @@ const Navbar = () => {
     { name: 'Details', id: 'details', href: '#details' },
     { name: 'Timeline', id: 'timeline', href: '#timeline' },
     
-    {name : 'Staff Coordinators', id : "staff", href : "#staff-coordinators"},
+    {name : 'Faculty Coordinators', id : "staff", href : "#staff-coordinators"},
     {name : 'Student Coordinators', id : "stud", href : "#student-coordinators"},
     { name: 'Contact', id: 'contact', href: '#contact' }
 

@@ -275,7 +275,7 @@ const Hero = () => {
             <div className="flex items-center gap-2">
               <Calendar className="w-5 h-5 text-white" aria-hidden="true" />
               <time dateTime="2026-03-26" className="font-bold text-white">
-                March 26-27, 2026
+                March 27-28, 2026
               </time>
             </div>
             <div className="hidden sm:block w-1 h-1 bg-[#e6e6fa]/50 rounded-full"></div>
@@ -297,19 +297,19 @@ const Hero = () => {
           {/* CTA Buttons with lavender accents */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <Link
-              href="#"
+              href="https://docs.google.com/presentation/d/1hH50L9k7tmrcRYKyjiM1BFxKdqkSh9th/edit?usp=sharing&ouid=106583375527053889036&rtpof=true&sd=true"
               className="group flex items-center justify-center gap-3 px-8 py-4 bg-white/10 backdrop-blur-sm border-2 border-white/20 rounded-xl hover:bg-white/20 hover:border-white/30 hover:shadow-lg hover:shadow-[#e6e6fa]/20 transition-all duration-200 w-full sm:w-auto max-w-sm relative overflow-hidden"
               aria-label="Download project template document"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-[#e6e6fa]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <Download className="w-5 h-5 text-white group-hover:scale-110 transition-transform relative z-10" aria-hidden="true" />
               <span className="font-bold text-white relative z-10">
-                Download Template
+                Download Banner Template
               </span>
             </Link>
 
             <Link
-              href="https://forms.gle/qUdaBkHGURLt1d7eA"
+              href="https://forms.gle/ikDdY6PtisXAkAWX9"
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-white to-[#e6e6fa] rounded-xl hover:from-white hover:to-blue-200 hover:shadow-xl hover:shadow-[#e6e6fa]/30 transition-all duration-200 w-full sm:w-auto max-w-sm font-bold text-[#0D4BA0]"
