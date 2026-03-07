@@ -309,7 +309,7 @@ const Hero = () => {
             </Link>
 
             <Link
-              href="https://forms.gle/ikDdY6PtisXAkAWX9"
+              href="https://forms.gle/y3jXAkwBFR8sZ64b6"
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-white to-[#e6e6fa] rounded-xl hover:from-white hover:to-blue-200 hover:shadow-xl hover:shadow-[#e6e6fa]/30 transition-all duration-200 w-full sm:w-auto max-w-sm font-bold text-[#0D4BA0]"

@@ -9,66 +9,31 @@ const RoadMap = () => {
   const [timeRemaining, setTimeRemaining] = useState<string>('');
 
   const phases = [
-    {
-      id: 1,
-      title: "Project Submission",
-      startDate: new Date('2026-01-15'),
-      endDate: new Date('2026-01-16'),
-      description: "Submit your problem statement and initial project proposals through the online portal.",
-      registrationLink: "https://forms.gle/qUdaBkHGURLt1d7eA"
-    },
-    {
-      id: 2,
-      title: "Phase 1: Screening",
-      startDate: new Date('2026-01-20'),
-      endDate: new Date('2026-03-15'),
-      description: "Expert panel reviews all submissions for technical feasibility, innovation, and potential impact.",
-    },
-    {
-      id: 3,
-      title: "Shortlisting Announcement",
-      startDate: new Date('2026-03-24'),
-      endDate: new Date('2026-03-24'),
-      description: "Three separate lists published for in-house, external, and special category shortlisted candidates.",
-    },
-    {
-      id: 4,
-      title: "Phase 2: Registration",
-      startDate: new Date('2026-03-25'),
-      endDate: new Date('2026-03-31'),
-      description: "Shortlisted teams complete formal registration, payment processing, and final document submission.",
-      registrationLink: "#"
-    },
-    {
-      id: 5,
-      title: "Project Presentations Day 1",
-      startDate: new Date('2026-03-26'),
-      endDate: new Date('2026-03-26'),
-      description: "Live presentations and demonstrations before judges at SSN College of Engineering campus.",
-    },
-    {
-      id: 6,
-      title: "Main Event - VIVID 10.0 Day 2",
-      startDate: new Date('2026-03-27'),
-      endDate: new Date('2026-03-27'),
-      description: "Grand finale with all shortlisted teams presenting their innovative projects to the evaluation panel.",
-    },
-    {
-      id: 7,
-      title: "Phase 3: Power Judging",
-      startDate: new Date('2026-03-27'),
-      endDate: new Date('2026-03-27'),
-      description: "Intensive final round with detailed evaluation, technical questioning, and finalist selection.",
-    },
-    {
-      id: 8,
-      title: "Prize Distribution & Closing",
-      startDate: new Date('2026-03-27'),
-      endDate: new Date('2026-03-27'),
-      description: "Award ceremony recognizing outstanding projects and presenting prizes to winners.",
-    }
-  ];
-
+  {
+    id: 1,
+    title: "Project Demo & Poster Submission",
+    startDate: new Date('2026-03-8'),
+    endDate: new Date('2026-03-19'),
+    description:
+      "Teams must submit their project demo along with the poster explaining their solution, architecture, and impact.",
+  },
+  {
+    id: 2,
+    title: "Declaration of Shortlisted Candidates",
+    startDate: new Date('2026-03-20'),
+    endDate: new Date('2026-03-20'),
+    description:
+      "The list of shortlisted teams will be published after evaluation of the submitted demos and posters.",
+  },
+  {
+    id: 3,
+    title: "Final Presentation",
+    startDate: new Date('2026-03-26'),
+    endDate: new Date('2026-03-26'),
+    description:
+      "Shortlisted teams will present their projects live before the judging panel.",
+  }
+];
   const getPhaseStatus = (phase: any) => {
     const now = new Date();
     const start = new Date(phase.startDate);
@@ -317,26 +282,7 @@ const RoadMap = () => {
                           </div>
                         </div>
 
-                        {/* Expanded content */}
-                        {isExpanded && (
-                          <div className="mt-5 pt-5 border-t border-gray-200">
-                            <p className="text-gray-700 leading-relaxed mb-4">
-                              {phase.description}
-                            </p>
-                            
-                            {phase.registrationLink && (isCurrent || isUpcoming) && (
-                              <a
-                                href={phase.registrationLink}
-                                target={phase.registrationLink.startsWith('http') ? '_blank' : undefined}
-                                rel={phase.registrationLink.startsWith('http') ? 'noopener noreferrer' : undefined}
-                                className="inline-flex items-center gap-2 px-4 py-2 bg-[#0D4BA0] text-white rounded-lg hover:bg-[#0a3d8a] transition-colors duration-200 font-medium"
-                              >
-                                {isCurrent ? 'Register Now' : 'Pre-Register'}
-                                <ChevronUp className="w-4 h-4 rotate-90" />
-                              </a>
-                            )}
-                          </div>
-                        )}
+                        
                       </div>
                     </div>
                   </div>

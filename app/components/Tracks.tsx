@@ -5,7 +5,7 @@ import { Cpu, Brain, BarChart3, Link2, Shield } from 'lucide-react';
 const Tracks = () => {
   const tracks = [
     {
-      title: "IoT",
+      title: "AIML/Robotics/Smart Education",
       fullTitle: "Internet of Things",
       icon: <Cpu className="w-8 h-8" />,
       color: "from-blue-500 to-blue-600",
@@ -13,7 +13,7 @@ const Tracks = () => {
       description: "Harness the power of connected devices and smart systems to create innovative IoT solutions that solve real-world problems and drive digital transformation."
     },
     {
-      title: "AI & ML",
+      title: "Agriculture",
       fullTitle: "Artificial Intelligence & Machine Learning",
       icon: <Brain className="w-8 h-8" />,
       color: "from-purple-500 to-purple-600",
@@ -21,29 +21,14 @@ const Tracks = () => {
       description: "Develop intelligent applications powered by machine learning algorithms to unlock insights, automate processes, and create transformative user experiences."
     },
     {
-      title: "Data Analytics",
+      title: "Healthcare",
       fullTitle: "Data Science & Analytics",
       icon: <BarChart3 className="w-8 h-8" />,
       color: "from-emerald-500 to-emerald-600",
       bgColor: "bg-emerald-50",
       description: "Transform raw data into actionable insights using advanced analytics and visualization techniques to drive strategic business decisions."
     },
-    {
-      title: "Blockchain",
-      fullTitle: "Distributed Ledger Technology",
-      icon: <Link2 className="w-8 h-8" />,
-      color: "from-orange-500 to-orange-600",
-      bgColor: "bg-orange-50",
-      description: "Build secure, decentralized solutions leveraging blockchain technology for enhanced transparency, security, and trust in modern applications."
-    },
-    {
-      title: "Cybersecurity",
-      fullTitle: "Information Security",
-      icon: <Shield className="w-8 h-8" />,
-      color: "from-red-500 to-red-600",
-      bgColor: "bg-red-50",
-      description: "Develop robust security solutions to protect systems and networks from evolving cyber threats, ensuring data integrity and user privacy."
-    }
+   
   ];
 
   return (
@@ -113,7 +98,7 @@ const Tracks = () => {
             Select your preferred track and submit your groundbreaking project. Make your mark on the national stage!
           </p>
           <a 
-            href="#hero"
+            href="https://forms.gle/y3jXAkwBFR8sZ64b6"
             className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-[#0D4BA0] to-blue-700 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-blue-500/30 transition-all hover:-translate-y-1"
           >
             Submit Your Project

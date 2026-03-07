@@ -36,7 +36,7 @@ const EventDetails = () => {
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                     <span className="text-gray-700">
-                      Participants must be from <span className="font-bold text-[#0D4BA0]">IT, CSE, ECE,  or EEE</span> streams (UG/PG)
+                      Participants must be from <span className="font-bold text-[#0D4BA0]">IT, CSE, ECE, BME, MECH or EEE</span> streams (UG/PG)
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
@@ -73,7 +73,7 @@ const EventDetails = () => {
                       <h4 className="font-bold text-lg text-gray-900">All College Students</h4>
                     </div>
                     <p className="text-gray-600 ml-10">
-                      <span className="font-bold text-[#0D4BA0]">₹1,000 + GST</span> (for entire team, only if shortlisted for Phase 2)
+                      <span className="font-bold text-[#0D4BA0]">₹2,000 + GST</span> (for entire team, only if shortlisted for Phase 2)
                     </p>
                   </div>
                 </div>
@@ -95,28 +95,15 @@ const EventDetails = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="bg-white rounded-lg p-4 border border-gray-200">
                       <p className="text-sm text-gray-600 mb-1">In-House Event</p>
-                      <p className="font-bold text-lg text-gray-900">27 March 2026</p>
+                      <p className="font-bold text-lg text-gray-900">26 March 2026</p>
                     </div>
                     <div className="bg-white rounded-lg p-4 border border-gray-200">
                       <p className="text-sm text-gray-600 mb-1">External Event</p>
-                      <p className="font-bold text-lg text-gray-900">28 March 2026</p>
+                      <p className="font-bold text-lg text-gray-900">26 March 2026</p>
                     </div>
                   </div>
                   
-                  <div className="bg-white rounded-lg p-6 border border-red-200 border-l-4 border-l-red-500">
-                    <p className="text-sm text-gray-600 mb-3 font-semibold">Project Submission Deadline</p>
-                    <div className="flex flex-col sm:flex-row gap-3">
-                      <div className="flex-1">
-                        <p className="text-xs text-gray-500 mb-1">Early Deadline</p>
-                        <p className="font-bold text-[#0D4BA0] text-lg">Before 21 March 2026</p>
-                      </div>
-                      <div className="hidden sm:block w-px bg-gray-300"></div>
-                      <div className="flex-1">
-                        <p className="text-xs text-gray-500 mb-1">Final Deadline</p>
-                        <p className="font-bold text-red-600 text-lg">22 March 2026</p>
-                      </div>
-                    </div>
-                  </div>
+                 
                 </div>
               </div>
             </div>
@@ -158,7 +145,7 @@ const EventDetails = () => {
                         Excellence Recognized
                       </h4>
                       <p className="text-base md:text-lg text-gray-700 font-medium">
-                        Outstanding projects will be awarded with prizes and certificates of achievement
+                        Certificates will be provided.
                       </p>
                     </div>
                   </div>
@@ -172,46 +159,8 @@ const EventDetails = () => {
               </div>
             </div>
             
-            <p className="text-gray-600 mb-6">
-              Prize amounts are subject to confirmation. The organizer reserves the right to substitute with equivalent value prizes. All awards are subject to VIVID 10.0 terms & conditions.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="bg-white rounded-lg p-6 border border-gray-200">
-                <p className="text-sm font-semibold text-gray-600 mb-4">In-House (SSN Students)</p>
-                <div className="space-y-3">
-                  <div className="flex justify-between items-center pb-3 border-b border-gray-200">
-                    <span className="text-gray-700">1st Prize</span>
-                    <span className="font-bold text-[#0D4BA0]">TBD</span>
-                  </div>
-                  <div className="flex justify-between items-center pb-3 border-b border-gray-200">
-                    <span className="text-gray-700">2nd Prize</span>
-                    <span className="font-bold text-[#0D4BA0]">TBD</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-700">3rd Prize</span>
-                    <span className="font-bold text-[#0D4BA0]">TBD</span>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="bg-white rounded-lg p-6 border border-gray-200">
-                <p className="text-sm font-semibold text-gray-600 mb-4">External Participants</p>
-                <div className="space-y-3">
-                  <div className="flex justify-between items-center pb-3 border-b border-gray-200">
-                    <span className="text-gray-700">1st Prize</span>
-                    <span className="font-bold text-[#0D4BA0]">TBD</span>
-                  </div>
-                  <div className="flex justify-between items-center pb-3 border-b border-gray-200">
-                    <span className="text-gray-700">2nd Prize</span>
-                    <span className="font-bold text-[#0D4BA0]">TBD</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-700">3rd Prize</span>
-                    <span className="font-bold text-[#0D4BA0]">TBD</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+          
+          
           </div>
         </div>
       </div>
