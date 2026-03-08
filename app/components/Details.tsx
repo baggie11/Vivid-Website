@@ -127,14 +127,22 @@ const EventDetails = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-[#0D4BA0] via-[#1E6FE8] to-[#0D4BA0] rounded-2xl blur-xl opacity-20"></div>
                 
                 {/* Main container */}
-                <div className="relative bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl p-8 md:p-12 border-2 border-[#0D4BA0] shadow-xl">
+                <div className="relative bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl p-8 md:p-12 border-2 border-[#0D4BA0] shadow-xl overflow-hidden">
                   <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
-                    {/* Trophy Icon */}
+                    {/* Trophy Image */}
                     <div className="flex-shrink-0">
                       <div className="relative">
                         <div className="absolute inset-0 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-full blur-md opacity-50"></div>
-                        <div className="relative bg-gradient-to-br from-yellow-400 via-amber-500 to-yellow-600 p-6 rounded-full shadow-lg">
-                          <Trophy className="w-16 h-16 md:w-20 md:h-20 text-white" strokeWidth={2.5} />
+                        <div className="relative rounded-full shadow-lg overflow-hidden w-32 h-32 md:w-40 md:h-40 border-4 border-amber-400 bg-gradient-to-br from-yellow-50 to-amber-100">
+                          <img
+                            src="https://images.jdmagicbox.com/v2/comp/chennai/s6/044pxx44.xx44.160624081247.k8s6/catalogue/micro-laser-art-triplicane-chennai-acrylic-trophy-manufacturers-bu119yp4x8.jpg"
+                            alt="Golden Trophy"
+                            className="w-full h-full object-cover object-center"
+                            style={{
+                              animation: "trophyRock 3s ease-in-out infinite",
+                            }}
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-amber-500/10 via-transparent to-yellow-300/10 rounded-full"></div>
                         </div>
                       </div>
                     </div>
@@ -142,13 +150,17 @@ const EventDetails = () => {
                     {/* Text Content */}
                     <div className="flex-1 text-center md:text-left">
                       <h4 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
-                        Excellence Recognized
+                        Trophy Awaits the Winning Team
                       </h4>
-                      <p className="text-base md:text-lg text-gray-700 font-medium">
-                        Certificates will be provided.
-                      </p>
                     </div>
                   </div>
+
+                  <style>{`
+                    @keyframes trophyRock {
+                      0%, 100% { transform: rotate(-3deg) scale(1); }
+                      50% { transform: rotate(3deg) scale(1.05); }
+                    }
+                  `}</style>
                 </div>
                 
                 {/* Corner accents */}
