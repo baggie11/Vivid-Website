@@ -28,8 +28,8 @@ const RoadMap = () => {
   {
     id: 3,
     title: "Final Presentation",
-    startDate: new Date('2026-03-26'),
-    endDate: new Date('2026-03-26'),
+    startDate: new Date('2026-03-27'),
+    endDate: new Date('2026-03-27'),
     description:
       "Shortlisted teams will present their projects live before the judging panel.",
   }

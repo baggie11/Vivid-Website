@@ -235,12 +235,14 @@ const Hero = () => {
         <div className="text-center">
           {/* Badge with lavender accent */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-white/10 to-white/20 backdrop-blur-sm border border-white/20 mb-8 animate-fade-in relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-[#e6e6fa]/10 to-transparent opacity-30"></div>
-            <Sparkles className="w-4 h-4 text-white relative z-10" aria-hidden="true" />
-            <span className="text-sm font-bold text-white relative z-10">
-              10th Edition • National Level Project Competition
-            </span>
-          </div>
+  <div className="absolute inset-0 bg-gradient-to-r from-[#e6e6fa]/10 to-transparent opacity-30"></div>
+  <Sparkles className="w-4 h-4 text-white relative z-10" aria-hidden="true" />
+  <span className="text-sm font-bold text-white relative z-10 flex items-center">
+    <span className="text-3xl font-black mr-2 bg-gradient-to-r from-yellow-300 via-white to-[#e6e6fa] bg-clip-text text-transparent drop-shadow-lg">10th</span>
+    <span className="text-white/80 text-xs uppercase tracking-wider">Edition •</span>
+    <span className="ml-1 text-white/90">National Level Project Competition</span>
+  </span>
+</div>
 
          {/* Main Title with Logo */}
 <div className="flex flex-col items-center justify-center mb-6">
@@ -275,7 +277,7 @@ const Hero = () => {
             <div className="flex items-center gap-2">
               <Calendar className="w-5 h-5 text-white" aria-hidden="true" />
               <time dateTime="2026-03-26" className="font-bold text-white">
-                March 26, 2026
+                March 27, 2026
               </time>
             </div>
             <div className="hidden sm:block w-1 h-1 bg-[#e6e6fa]/50 rounded-full"></div>

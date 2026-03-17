@@ -95,11 +95,11 @@ const EventDetails = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="bg-white rounded-lg p-4 border border-gray-200">
                       <p className="text-sm text-gray-600 mb-1">In-House Event</p>
-                      <p className="font-bold text-lg text-gray-900">26 March 2026</p>
+                      <p className="font-bold text-lg text-gray-900">27 March 2026</p>
                     </div>
                     <div className="bg-white rounded-lg p-4 border border-gray-200">
                       <p className="text-sm text-gray-600 mb-1">External Event</p>
-                      <p className="font-bold text-lg text-gray-900">26 March 2026</p>
+                      <p className="font-bold text-lg text-gray-900">27 March 2026</p>
                     </div>
                   </div>
                   
