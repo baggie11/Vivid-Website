@@ -1,6 +1,6 @@
 'use client';
 
-import { CheckCircle, Users, Trophy, Clock } from 'lucide-react';
+import { CheckCircle, Users, Trophy, Clock, Award, IndianRupee } from 'lucide-react';
 
 const EventDetails = () => {
   return (
@@ -42,7 +42,7 @@ const EventDetails = () => {
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                     <span className="text-gray-700">
-               <span className="font-bold">4 members per team</span>
+                      <span className="font-bold">4 members per team</span>
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
@@ -102,77 +102,39 @@ const EventDetails = () => {
                       <p className="font-bold text-lg text-gray-900">27 March 2026</p>
                     </div>
                   </div>
-                  
-                 
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Awards & Prizes */}
+          {/* Awards & Prizes - Cash Prizes Section */}
           <div className="bg-gradient-to-br from-amber-50 to-amber-50/50 rounded-2xl border border-amber-200 p-8 md:p-10 hover:shadow-lg transition-shadow">
-            <div className="flex items-center gap-4 mb-6">
+            <div className="flex items-center gap-4 mb-8">
               <div className="w-16 h-16 rounded-full bg-gradient-to-br from-yellow-400 to-amber-500 flex items-center justify-center flex-shrink-0 shadow-lg">
-                <Trophy className="w-8 h-8 text-white" />
+                <IndianRupee className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
-                Rewards & Recognition
-              </h3>
-            </div>
-            
-            {/* Professional Trophy Showcase */}
-            <div className="relative mb-8 flex justify-center">
-              <div className="relative w-full max-w-2xl">
-                {/* Subtle glow effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-[#0D4BA0] via-[#1E6FE8] to-[#0D4BA0] rounded-2xl blur-xl opacity-20"></div>
-                
-                {/* Main container */}
-                <div className="relative bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl p-8 md:p-12 border-2 border-[#0D4BA0] shadow-xl overflow-hidden">
-                  <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
-                    {/* Trophy Image */}
-                    <div className="flex-shrink-0">
-                      <div className="relative">
-                        <div className="absolute inset-0 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-full blur-md opacity-50"></div>
-                        <div className="relative rounded-full shadow-lg overflow-hidden w-32 h-32 md:w-40 md:h-40 border-4 border-amber-400 bg-gradient-to-br from-yellow-50 to-amber-100">
-                          <img
-                            src="https://images.jdmagicbox.com/v2/comp/chennai/s6/044pxx44.xx44.160624081247.k8s6/catalogue/micro-laser-art-triplicane-chennai-acrylic-trophy-manufacturers-bu119yp4x8.jpg"
-                            alt="Golden Trophy"
-                            className="w-full h-full object-cover object-center"
-                            style={{
-                              animation: "trophyRock 3s ease-in-out infinite",
-                            }}
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-amber-500/10 via-transparent to-yellow-300/10 rounded-full"></div>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    {/* Text Content */}
-                    <div className="flex-1 text-center md:text-left">
-                      <h4 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
-                        Trophy Awaits the Winning Team
-                      </h4>
-                    </div>
-                  </div>
-
-                  <style>{`
-                    @keyframes trophyRock {
-                      0%, 100% { transform: rotate(-3deg) scale(1); }
-                      50% { transform: rotate(3deg) scale(1.05); }
-                    }
-                  `}</style>
-                </div>
-                
-                {/* Corner accents */}
-                <div className="absolute -top-1 -left-1 w-6 h-6 border-t-4 border-l-4 border-[#0D4BA0] rounded-tl-lg"></div>
-                <div className="absolute -top-1 -right-1 w-6 h-6 border-t-4 border-r-4 border-[#0D4BA0] rounded-tr-lg"></div>
-                <div className="absolute -bottom-1 -left-1 w-6 h-6 border-b-4 border-l-4 border-[#0D4BA0] rounded-bl-lg"></div>
-                <div className="absolute -bottom-1 -right-1 w-6 h-6 border-b-4 border-r-4 border-[#0D4BA0] rounded-br-lg"></div>
+              <div>
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
+                  Prize Pool
+                </h3>
+                <p className="text-amber-600 font-bold text-xl mt-1">₹30,000 Total Cash Prizes</p>
               </div>
             </div>
             
-          
-          
+            {/* Prize Distribution */}
+            <div className="space-y-4">
+              {/* 1st Prize */}
+           
+            </div>
+            
+            {/* Additional Recognition */}
+            <div className="mt-6 pt-4 border-t-2 border-amber-200">
+              <div className="bg-white rounded-lg p-4 text-center">
+                <p className="text-gray-700">
+                  🏆 <span className="font-bold text-[#0D4BA0]">Special Recognition:</span> All finalists receive participation certificates!
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -80,7 +80,7 @@ const AcademicContactPage = () => {
                 <div>
                   <h4 className="font-bold text-gray-900 mb-1">Email</h4>
                   <a href="mailto:vivid25@it.ssn.edu.in" className="text-[#0D4BA0] hover:text-[#0a3d87] transition-colors break-all">
-                    vivid25@it.ssn.edu.in
+                    vivid26@it.ssn.edu.in
                   </a>
                 </div>
               </div>
