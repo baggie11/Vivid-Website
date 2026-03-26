@@ -311,7 +311,7 @@ const Hero = () => {
             </Link>
 
             <Link
-              href="https://forms.gle/y3jXAkwBFR8sZ64b6"
+              href="https://forms.gle/ikDdY6PtisXAkAWX9"
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-white to-[#e6e6fa] rounded-xl hover:from-white hover:to-blue-200 hover:shadow-xl hover:shadow-[#e6e6fa]/30 transition-all duration-200 w-full sm:w-auto max-w-sm font-bold text-[#0D4BA0]"
@@ -321,6 +321,16 @@ const Hero = () => {
               <span className="font-bold">Submit Project</span>
               <ArrowRight className="w-4 h-4 text-[#0D4BA0] opacity-0 group-hover:opacity-100 -ml-2 group-hover:ml-0 transition-all" aria-hidden="true" />
             </Link>
+
+            <a
+              href="/brochure.pdf"
+              download
+              className="group flex items-center justify-center gap-3 px-8 py-4 bg-white/10 backdrop-blur-sm border-2 border-white/20 rounded-xl hover:bg-white/20 hover:border-white/30 hover:shadow-lg hover:shadow-[#e6e6fa]/20 transition-all duration-200 w-full sm:w-auto max-w-sm"
+              aria-label="Download event brochure"
+            >
+              <Download className="w-5 h-5 text-white group-hover:scale-110 transition-transform" aria-hidden="true" />
+              <span className="font-bold text-white">Download Brochure</span>
+            </a>
           </div>
 
           {/* Trust badges with lavender accents */}

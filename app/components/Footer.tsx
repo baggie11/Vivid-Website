@@ -70,7 +70,7 @@ const Footer = () => {
             <h4 className="text-lg font-bold mb-4">Resources</h4>
             <ul className="space-y-3">
               <li>
-                <a href="https://forms.gle/qUdaBkHGURLt1d7eA" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 transition-colors flex items-center gap-2">
+                <a href="https://forms.gle/FxY9mKgny1naQ6aB6" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 transition-colors flex items-center gap-2">
                   <span>→</span> Register Now
                 </a>
               </li>

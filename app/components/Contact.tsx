@@ -123,7 +123,7 @@ const AcademicContactPage = () => {
               Quick Links
             </h3>
             <div className="space-y-4">
-              <a href="https://forms.gle/qUdaBkHGURLt1d7eA" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 bg-blue-50 rounded-xl hover:bg-blue-100 transition-colors group">
+              <a href="https://forms.gle/FxY9mKgny1naQ6aB6" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 bg-blue-50 rounded-xl hover:bg-blue-100 transition-colors group">
                 <div className="w-12 h-12 rounded-lg bg-[#0D4BA0] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
                   <span className="text-white font-bold text-lg">→</span>
                 </div>

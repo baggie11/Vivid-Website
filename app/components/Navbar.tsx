@@ -87,14 +87,12 @@ const Navbar = () => {
             ))}
 
             {/* CTA Button */}
-            <Link href="https://forms.gle/y3jXAkwBFR8sZ64b6" target="_blank" rel="noopener noreferrer">
             <button
               className="ml-4 px-6 py-2 rounded-lg text-white font-semibold bg-[#0D4BA0] hover:bg-[#0a3d87] hover:shadow-md transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white md:mr-[-130px]"
               aria-label="Register for VIVID 10.0"
             >
               Register
             </button>
-            </Link>
           </div>
 
           {/* Mobile Menu and Theme Toggle */}
@@ -139,12 +137,16 @@ const Navbar = () => {
             
             {/* Register Button with proper spacing */}
             <div className="pt-4 mt-2 border-t border-gray-100">
-              <button
+              <Link
+                href="https://forms.gle/FxY9mKgny1naQ6aB6"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsOpen(false)}
                 className="w-full px-4 py-3 rounded-lg text-white font-semibold bg-[#0D4BA0] hover:bg-[#0a3d87] transition-colors shadow-sm"
                 aria-label="Register for VIVID 10.0"
               >
                 Register Now
-              </button>
+              </Link>
             </div>
           </div>
         </div>
